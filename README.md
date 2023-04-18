@@ -241,8 +241,14 @@
 
 ```
 
+
+## Laravel Add a new column to existing table in a migration:
+
+###   1. Normal Way:
  
 <br/>
+
+
 <br/>
 <br/>
 <br/>
