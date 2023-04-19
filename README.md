@@ -685,15 +685,58 @@ class Post extends Model
 - Mechanics
 - Cars
 - Woners
-
+ <br/>
 
 <img src="./images/8.png" width="700" title="Mechanics image"/>
 <img src="./images/9.png" width="700" title="Cars image"/>
 <img src="./images/10.png" width="700" title="Woners image"/>
 
+<br/>
+
+### Mechanic Model  
+```
+class Mechanic extends Model
+{
+    use HasFactory;
+
+    public function carWoner()
+    {
+        return $this->hasOneThrough(Woner::class, Car::class);
+    }
+    public function carModel()
+    {
+        return $this->hasOne(Car::class);
+    }
+}
+
+```
 
 
 <br/>
+
+### Controller method   
+```
+public function hasOneThrough(){
+
+    $mechanic = Mechanic::with('carWoner')->get();
+    return view('eloquentRelationship.hasOneThrough', compact('mechanic'));
+}
+
+```
+
+
+<br/>
+
+## Output
+
+<img src="./images/11.png" width="700" title="Output image"/>
+
+
+
+
+
+
+
 <br/>
 <br/>
 <br/>
