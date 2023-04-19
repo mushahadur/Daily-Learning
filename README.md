@@ -646,6 +646,37 @@ public function oneToOne(){
 <br/>
 
 
+<h2 align="center">One to Many</h2>
+ <br/>
+
+### Comment Model  
+```
+class Comment extends Model
+{
+    use HasFactory;
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
+}
+```
+### Post Model  
+```
+class Post extends Model
+{
+    use HasFactory;
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+}
+```
+
 
 
 
