@@ -361,8 +361,20 @@ php artisan migrate
 
 ### Demo Table :
 <img src="images/6.png" width="600" title="Add a Address Column "/>
-
 <br/>
+
+### Step 1 :
+#### Go to Product Model and use SoftDeletes 
+```
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Product extends Model
+{
+  use SoftDeletes;
+}
+
+
+```
 <br/>
 <br/>
 <br/>
