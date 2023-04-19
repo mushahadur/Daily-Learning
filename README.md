@@ -476,7 +476,7 @@ DB::table('users')->insert([
 ]);
 
 ```
-<br/>
+
 
 #### For Example update  query  
 ```
@@ -485,7 +485,7 @@ DB::table('users')
     ->update(['name' => 'John Doe', 'email' => 'johndoe@example.com']);
 
 ```
-<br/>
+
 
 #### For Example delete query  
 ```
@@ -493,6 +493,8 @@ DB::table('users')->where('id', 1)->delete();
 
 ```
 <br/>
+
+### For ORM Link: https://w3programmers.com/bangla/eloquent-basics/
 
 
 <br/>
