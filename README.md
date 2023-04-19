@@ -252,10 +252,56 @@
 <img src="images/1.png" width="600" title="User Table"/>
 
 <br/>
-<br/>
-<br/>
+
+### Step 1 :
+#### Terminal command
+```
+php artisan make:migration add_address_to_users_table --table=users
+
+```
 <br/>
 
+### Step 2 :
+#### Add new migration file
+```
+   /**
+     * Run the migrations.
+     */
+
+
+public function up(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('address')->nullable()->after('phone');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('address');
+        });
+    }
+
+```
+<br/>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 
