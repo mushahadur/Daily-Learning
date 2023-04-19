@@ -4,6 +4,9 @@
 <br/>
 
 <h2 align="center">Self Learing</h2>
+<img src="./images/sl1.png" width="700" title="Output image"/>
+<img src="./images/sl2.jpg" width="700" title="Output image"/>
+<img src="./images/s31.jpg" width="700" title="Output image"/>
  <br/>
  
 ---
