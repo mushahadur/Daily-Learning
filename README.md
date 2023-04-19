@@ -249,8 +249,7 @@
  
 <br/>
 <!-- ![profile](./images/me.jpg) -->
-<img src="./images/me.JPG" width="400" title="profile image"/>
-![1](https://user-images.githubusercontent.com/67184635/232722315-e03651e9-7786-4c0d-988f-ce1b15589f37.png)
+<img src="images/1.png" width="600" title="User Table"/>
 
 <br/>
 <br/>
