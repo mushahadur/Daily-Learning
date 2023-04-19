@@ -487,6 +487,13 @@ DB::table('users')
 ```
 <br/>
 
+#### For Example delete query  
+```
+DB::table('users')->where('id', 1)->delete();
+
+```
+<br/>
+
 
 <br/>
 <br/>
