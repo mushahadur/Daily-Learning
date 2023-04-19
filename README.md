@@ -468,12 +468,21 @@ ORM গুলো সাধারণত database query, data insert, update এ�
 সামগ্রিকভাবে, ORM ডাটাবেসের সাথে ইন্টারঅ্যাক্ট করার জন্য প্রয়োজনীয় repetitive code এর পরিমাণ হ্রাস করে এবং ডেটার সাথে কাজ করার আরও সহজ উপায় প্রদান করে database-driven application গুলির development কে সহজ করতে পারে।
 </p>
 
-### For Example insert query  
+#### For Example insert query  
 ```
 DB::table('users')->insert([
     'name' => 'John Doe',
     'email' => 'johndoe@example.com',
 ]);
+
+```
+<br/>
+
+#### For Example update  query  
+```
+DB::table('users')
+    ->where('id', 1)
+    ->update(['name' => 'John Doe', 'email' => 'johndoe@example.com']);
 
 ```
 <br/>
