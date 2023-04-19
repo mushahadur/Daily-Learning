@@ -359,7 +359,7 @@ php artisan migrate
  <img src="images/5.png" width="600" title="Soft delete"/>
 <br/>
 
-### Demo Table :
+### Demo Products Table :
 <img src="images/6.png" width="600" title="Add a Address Column "/>
 <br/>
 
@@ -373,9 +373,50 @@ class Product extends Model
   use SoftDeletes;
 }
 
+```
+<br/>
+
+### Step 2 :
+#### Terminal command 
+```
+php artisan make:migration add_deleted_at_to_products_table --table=products
 
 ```
 <br/>
+<br/>
+
+### Step 3 :
+#### add_deleted_at_to_products_table   of include
+```
+public function up()
+    {
+        Schema::table('products', function (Blueprint $table) {
+            $table->softDeletes();
+        });
+    }
+public function down()
+    {
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
+    }
+
+```
+<br/>
+<br/>
+
+### Step 4 :
+#### Terminal command 
+```
+php artisan migrate
+
+```
+<br/>
+
+## Demo Products Table output :
+<img src="images/7.png" width="600" title="Demo Products Table output"/>
+<br/>
+
 <br/>
 <br/>
 <br/>
