@@ -477,7 +477,6 @@ DB::table('users')->insert([
 
 ```
 
-
 #### For Example update  query  
 ```
 DB::table('users')
@@ -486,18 +485,54 @@ DB::table('users')
 
 ```
 
-
 #### For Example delete query  
 ```
 DB::table('users')->where('id', 1)->delete();
 
 ```
+
+
+#### For ORM Link: https://w3programmers.com/bangla/eloquent-basics/
+
+
 <br/>
 
-### For ORM Link: https://w3programmers.com/bangla/eloquent-basics/
+
+# @stack() and      @push()      @endpush:
+
+### For Example @stack : 
+
+####  app.blade.php
+```
+    <html>
+    <head>
+        <title>Website</title>
+        @stack('head-scripts')
+    </head>
 
 
-<br/>
+    <body>
+        <main>@yield('content')</main>
+
+    @stack('body-scripts')
+    </body>
+    </html>
+```
+### For Example  @push : 
+
+####  home.blade.php
+```
+    @extends('layouts.app')
+    @section('content')
+        <div>Hello World</div>
+
+        @push('body-scripts')
+            @once
+            <script src="https://unpkg.com/imask"></script>
+            @endonce
+        @endpush
+    @endsection
+```
 <br/>
 <br/>
 <br/>
