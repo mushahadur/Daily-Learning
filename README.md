@@ -351,13 +351,17 @@ php artisan migrate
 
 <br/>
 
-## Types of delete Laravel:
+# Types of delete for Laravel:
 
 ### Soft Delete : 
  <p>  Soft delete is a feature in Laravel that allows you to delete records without actually removing them from the database. Instead, Laravel marks the record as "deleted" by adding a timestamp to the deleted_at column of the table. This makes it possible to recover deleted records if needed. To use soft delete, you need to add the SoftDeletes trait to your model class and add a deleted_at column to your database table. </p>
- <br/>
+
  <img src="images/5.png" width="600" title="Soft delete"/>
 <br/>
+
+### Demo Table :
+<img src="images/6.png" width="600" title="Add a Address Column "/>
+
 <br/>
 <br/>
 <br/>
