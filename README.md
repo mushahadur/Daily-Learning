@@ -1,7 +1,7 @@
 <!--markdown tutorial-->
 
 
-<img align="center" src="./images/sl1.png" width="900" title="Self Learing image"/>
+<img  align="center" src="./images/sl1.png" width="900" title="Self Learing image"/>
 
  <br/>
  
@@ -249,7 +249,7 @@
  
 <br/>
 <!-- ![profile](./images/me.jpg) -->
-<img src="images/1.png" width="600" title="User Table"/>
+<img  align="center"  src="images/1.png" width="600" title="User Table"/>
 
 <br/>
 
@@ -287,7 +287,7 @@ php artisan migrate
 ```
 
 ## Output :
-<img src="images/address.png" width="600" title="Add a Address Column "/>
+<img  align="center"  src="images/address.png" width="600" title="Add a Address Column "/>
 <br/>
 <br/>
 
@@ -295,7 +295,7 @@ php artisan migrate
  
 <br/>
 <!-- ![profile](./images/me.jpg) -->
-<img src="images/3.png" width="600" title="User Table"/>
+<img  align="center"  src="images/3.png" width="600" title="User Table"/>
 <br/>
 
 ### Step 1 :
@@ -346,7 +346,7 @@ php artisan migrate
 ```
 
 ## Output :
-<img src="images/4.png" width="600" title="Add a Address Column "/>
+<img  align="center"  src="images/4.png" width="600" title="Add a Address Column "/>
 
 
 <br/>
@@ -356,11 +356,11 @@ php artisan migrate
 ### Soft Delete : 
  <p>  Soft delete is a feature in Laravel that allows you to delete records without actually removing them from the database. Instead, Laravel marks the record as "deleted" by adding a timestamp to the deleted_at column of the table. This makes it possible to recover deleted records if needed. To use soft delete, you need to add the SoftDeletes trait to your model class and add a deleted_at column to your database table. </p>
 
- <img src="images/5.png" width="600" title="Soft delete"/>
+ <img  align="center"  src="images/5.png" width="600" title="Soft delete"/>
 <br/>
 
 ### Demo Products Table :
-<img src="images/6.png" width="600" title="Add a Address Column "/>
+<img  align="center"  src="images/6.png" width="600" title="Add a Address Column "/>
 <br/>
 
 ### Step 1 :
@@ -414,7 +414,7 @@ php artisan migrate
 <br/>
 
 ## Demo Products Table output :
-<img src="images/7.png" width="600" title="Demo Products Table output"/>
+<img  align="center"  src="images/7.png" width="600" title="Demo Products Table output"/>
 <br/>
 
 ### ProductController softDelete
@@ -687,9 +687,9 @@ class Post extends Model
 - Woners
  <br/>
 
-<img src="./images/8.png" width="700" title="Mechanics image"/>
-<img src="./images/9.png" width="700" title="Cars image"/>
-<img src="./images/10.png" width="700" title="Woners image"/>
+<img  align="center"  src="./images/8.png" width="700" title="Mechanics image"/>
+<img  align="center"  src="./images/9.png" width="700" title="Cars image"/>
+<img  align="center"  src="./images/10.png" width="700" title="Woners image"/>
 
 <br/>
 
@@ -729,7 +729,7 @@ public function hasOneThrough(){
 
 ## Output
 
-<img align="center" src="./images/11.png" height="300" width="900" title="Output image"/>
+<img  align="center" src="./images/11.png" height="250" width="700" title="Output image"/>
 
 
 
