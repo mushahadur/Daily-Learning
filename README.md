@@ -289,6 +289,64 @@ php artisan migrate
 ## Output :
 <img src="images/address.png" width="600" title="Add a Address Column "/>
 
+###   1. Way of the foreign key:
+ 
+<br/>
+<!-- ![profile](./images/me.jpg) -->
+<img src="images/3.png" width="600" title="User Table"/>
+<br/>
+
+### Step 1 :
+#### Terminal command
+```
+php artisan make:migration add_address_to_users_table --table=users
+
+```
+<br/>
+
+### Step 2 :
+#### Add new migration file
+```
+public function up(): void
+    {
+        Schema::table(customers, function (Blueprint $table) {
+            // 1. Create new column
+            // You probably want to make the new column nullable
+            $table->integer('customer_id')->unsigned()->nullable()->after('password');
+
+
+            // 2. Create foreign key constraints
+            $table->foreign('customer_id')->references('id')->on('stores')->onDelete('SET NULL');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table(customers, function (Blueprint $table) {
+            // 1. Drop foreign key constraints
+                $table->dropForeign(['customer_id']);
+            // 2. Drop the column
+                $table->dropColumn('customer_id');
+        });
+    }
+
+```
+<br/>
+
+### Step 3 :
+#### Terminal command 
+```
+php artisan migrate
+
+```
+
+## Output :
+<img src="images/4.png" width="600" title="Add a Address Column "/>
+
+<br/>
 <br/>
 <br/>
 <br/>
