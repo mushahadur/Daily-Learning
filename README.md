@@ -729,7 +729,7 @@ public function hasOneThrough(){
 
 ## Output
 
-<img align="center" src="./images/11.png" height="900" width="900" title="Output image"/>
+<img align="center" src="./images/11.png" height="300" width="900" title="Output image"/>
 
 
 
