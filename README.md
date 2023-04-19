@@ -417,6 +417,38 @@ php artisan migrate
 <img src="images/7.png" width="600" title="Demo Products Table output"/>
 <br/>
 
+### ProductController softDelete
+```
+    public function trash(){
+        return view('admin.product.trash-product', [
+            'products' => Product::onlyTrashed()->get()
+        ]);
+    }
+
+
+    public function undo($id){
+        $product = Product::withTrashed()->find($id);
+        $product->restore();
+        return redirect('/product-trash')->with('message', 'Product restore successfully! and go to manage Page');
+    }
+
+```
+<br/>
+
+### ProductController Hard Delete
+```
+    public function forceDelete($id){
+        $product = Product::withTrashed()->find($id);
+        $product->forceDelete();
+        return redirect('/product-trash')->with('message', 'Product Delete successfully! ');
+    }
+
+```
+<br/>
+
+### Hard Delete : 
+ <p>Hard delete is the traditional way of deleting records from a database. When you perform a hard delete, the record is completely removed from the database, and there is no way to recover it. To perform a hard delete in Laravel, you can use the delete() method on your model instance or the DB::delete() method if you want to delete records using a raw SQL query. </p>
+
 <br/>
 <br/>
 <br/>
