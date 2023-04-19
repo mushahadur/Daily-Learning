@@ -498,6 +498,7 @@ DB::table('users')->where('id', 1)->delete();
 <br/>
 
 
+
 # @stack() and      @push()      @endpush:
 
 ### For Example @stack : 
@@ -533,7 +534,44 @@ DB::table('users')->where('id', 1)->delete();
         @endpush
     @endsection
 ```
+
 <br/>
+<br/>
+
+# Use of Foreign key 
+
+<p>In a relational database, a foreign key is a column or a set of columns that refers to the primary key or a unique key of another table. A foreign key constraint is a way to enforce referential integrity between the data in two tables.</p>
+
+```
+   Schema::create('orders', function (Blueprint $table) {
+    $table->id();
+    $table->unsignedBigInteger('user_id');
+    $table->foreign('user_id')->references('id')->on('users');
+    // other columns...
+});
+
+```
+```
+Schema::table('orders', function (Blueprint $table) {
+    $table->unsignedBigInteger('user_id');
+    $table->foreign('user_id')
+          ->references('id')
+          ->on('users')
+          ->onDelete('cascade');
+});
+
+```
+<br/>
+
+
+
+
+
+
+
+
+
+
 <br/>
 <br/>
 <br/>
