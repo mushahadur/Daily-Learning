@@ -687,9 +687,9 @@ class Post extends Model
 - Woners
 
 
-<img src="./images/8.png" width="400" title="profile image"/>
-<img src="./images/9.png" width="400" title="profile image"/>
-<img src="./images/10.png" width="400" title="profile image"/>
+<img src="./images/8.png" width="700" title="Mechanics image"/>
+<img src="./images/9.png" width="700" title="Cars image"/>
+<img src="./images/10.png" width="700" title="Woners image"/>
 
 
 
