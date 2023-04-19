@@ -264,23 +264,13 @@ php artisan make:migration add_address_to_users_table --table=users
 ### Step 2 :
 #### Add new migration file
 ```
-   /**
-     * Run the migrations.
-     */
-
-
-public function up(): void
-    {
+public function up(): void{
         Schema::table('users', function (Blueprint $table) {
             $table->string('address')->nullable()->after('phone');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
+    public function down(): void{
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('address');
         });
@@ -289,7 +279,17 @@ public function up(): void
 ```
 <br/>
 
+### Step 3 :
+#### Terminal command 
+```
+php artisan migrate
 
+```
+<br/>
+
+## Output :
+<!-- ![Add a Address Column](./images/1.jpg) -->
+<img src="images/2.png" width="600" title="Add a Address Column "/>
 
 <br/>
 <br/>
