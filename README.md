@@ -1,7 +1,7 @@
 <!--markdown tutorial-->
 
 
-<img align="center" src="./images/sl1.png" width="700" title="Self Learing image"/>
+<img align="center" src="./images/sl1.png" width="900" title="Self Learing image"/>
 
  <br/>
  
