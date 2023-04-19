@@ -678,10 +678,18 @@ class Post extends Model
 ```
 
 
+<h2 align="center">Has One Through</h2>
+ <br/>
+
+### There have a three Table
+- Mechanics
+- Cars
+- Woners
 
 
-
-
+<img src="./images/8.png" width="400" title="profile image"/>
+<img src="./images/9.png" width="400" title="profile image"/>
+<img src="./images/10.png" width="400" title="profile image"/>
 
 
 
