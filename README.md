@@ -562,17 +562,98 @@ Schema::table('orders', function (Blueprint $table) {
 
 ```
 <br/>
+<br/>
 
+# Database Relationship 
 
+<h2 align="center">One to One</h2>
+ <br/>
 
+### Migrate Customer Table 
+```
+Schema::create('customers', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->timestamps();
+});
 
+```
 
+### Migrate Phone Table 
+```
+Schema::create('phones', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('model');
+            $table->integer('customer_id');
+            $table->timestamps();
+        });
 
+```
+### For Customer Model 
+```
+class Customer extends Model
+{
+    use HasFactory;
+    public function phone()
+    {
+        return $this->hasOne(Phone::class);
+    }
+}
 
+```
+### For Phone Model 
+```
+ class Phone extends Model
+{
+    use HasFactory;
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
+}
 
+```
 
+### Controller Function 
+```
+public function oneToOne(){
+         $customers = Customer::all();
+        return view('eloquentRelationship.oneToOne', compact('customers'));
+    }
+
+```
+
+### View For blade file
+```
+@foreach($customers as $data)
+    <tr>
+        <th scope="row">{{ $data->id }}</th>
+        <td>{{ $data->name }}</td>
+        <td>{{ $data->email }}</td>
+        <td>{{ $data->phone->name }}</td>
+        <td>{{ $data->phone->model }}</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary">Edit</button>
+            <button type="button" class="btn btn-outline-danger">Delete</button>
+        </td>
+    </tr>
+@endforeach
+
+```
 
 <br/>
+
+
+
+
+
+
+
+
+
+
 <br/>
 <br/>
 <br/>
