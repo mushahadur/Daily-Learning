@@ -285,11 +285,9 @@ public function up(): void{
 php artisan migrate
 
 ```
-<br/>
 
 ## Output :
-<!-- ![Add a Address Column](./images/1.jpg) -->
-<img src="images/2.png" width="600" title="Add a Address Column "/>
+<img src="images/address.png" width="600" title="Add a Address Column "/>
 
 <br/>
 <br/>
