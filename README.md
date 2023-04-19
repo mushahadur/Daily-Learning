@@ -288,8 +288,10 @@ php artisan migrate
 
 ## Output :
 <img src="images/address.png" width="600" title="Add a Address Column "/>
+<br/>
+<br/>
 
-###   1. Way of the foreign key:
+## Way of the foreign key:
  
 <br/>
 <!-- ![profile](./images/me.jpg) -->
@@ -346,6 +348,15 @@ php artisan migrate
 ## Output :
 <img src="images/4.png" width="600" title="Add a Address Column "/>
 
+
+<br/>
+
+## Types of delete Laravel:
+
+### Soft Delete : 
+ <p>  Soft delete is a feature in Laravel that allows you to delete records without actually removing them from the database. Instead, Laravel marks the record as "deleted" by adding a timestamp to the deleted_at column of the table. This makes it possible to recover deleted records if needed. To use soft delete, you need to add the SoftDeletes trait to your model class and add a deleted_at column to your database table. </p>
+ <br/>
+ <img src="images/5.png" width="600" title="Soft delete"/>
 <br/>
 <br/>
 <br/>
