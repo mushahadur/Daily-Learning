@@ -7,7 +7,7 @@
  
 ---
   <br/>
-  
+
 # List of topic
 
  | SI No         | Topic                  |
@@ -729,7 +729,7 @@ public function hasOneThrough(){
 
 ## Output
 
-<img src="./images/11.png" width="700" title="Output image"/>
+<img align="center" src="./images/11.png" height="900" width="900" title="Output image"/>
 
 
 
