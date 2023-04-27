@@ -736,6 +736,25 @@ public function hasOneThrough(){
 
 
 
+<br/>
+<br/>
+
+# Query Parameter 
+ <br/>
+
+<p>A query parameter, also known as a query string parameter or URL parameter, is a way to pass data from a client (such as a web browser) to a server as part of a URL.</p>
+
+
+<p>Query parameters are added to the end of a URL after a question mark ? and consist of one or more key-value pairs, separated by an ampersand &. For example, consider the following URL with query parameters: </p>
+
+```
+https://example.com/search?q=apple&category=fruits
+
+```
+
+
+<p>In this URL, q and category are the keys, and apple and fruits are the corresponding values. The server can extract the values of these parameters and use them to perform a search or filter the results.</p>
+
 
 <br/>
 <br/>
