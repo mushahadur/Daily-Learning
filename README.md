@@ -20,6 +20,7 @@
  | 07 | @stack() and      @push()      @endpush |
  | 08 | Foreign key use  |
  | 09 | Database Relationship |
+ | 09 | Query Parameter |
 
 <!-- all link is here -->
 
@@ -736,7 +737,7 @@ public function hasOneThrough(){
 
 <h2 align="center">Many to Many Relation</h2>
  <br/>
- 
+
 ### There have a three Table
 - Produces
 - Tags
