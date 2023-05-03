@@ -40,7 +40,7 @@
 
 <br/>
 
-```
+```php
  public function index()
     {
         $data = [
@@ -63,7 +63,7 @@
 
 <br/>
 
-```
+```php
  public function index()
 {
     return view('my-view')
@@ -76,7 +76,7 @@
 <br/>
 <p> For example:</p>
 
-```
+```php
  use App\Models\Post;
     use App\Models\User;
     public function index()
@@ -91,7 +91,7 @@
 
 #### View blade file by foreach loop:
 
-```
+```php
  @foreach ($posts as $post)
         <h2>{{ $post->title }}</h2>
         <p>{{ $post->content }}</p>
@@ -115,7 +115,7 @@
 
 <br/>
 
-```
+```php
  public function index()
 {
     return view('my-view')
@@ -136,7 +136,7 @@
 
 <br/>
 
-```
+```php
  use App\Models\Post;
     public function index()
     {
@@ -150,7 +150,7 @@
 
 #### View blade file by foreach loop:
 
-```
+```php
  @foreach ($posts as $post)
         <h2>{{ $post->title }}</h2>
         <p>{{ $post->content }}</p>
@@ -204,7 +204,7 @@
 
 <br/>
 
-```
+```php
  <?php
         trait Foo
         {
@@ -227,7 +227,7 @@
 <h4>File Name: bar.php</h4>
 
 
-```
+```php
  <?php
         include("foo.php");
         class Bar{
@@ -256,7 +256,9 @@
 
 ### Step 1 :
 #### Terminal command
-```
+
+
+```bash
 php artisan make:migration add_address_to_users_table --table=users
 
 ```
@@ -264,7 +266,7 @@ php artisan make:migration add_address_to_users_table --table=users
 
 ### Step 2 :
 #### Add new migration file
-```
+```php
 public function up(): void{
         Schema::table('users', function (Blueprint $table) {
             $table->string('address')->nullable()->after('phone');
@@ -282,7 +284,7 @@ public function up(): void{
 
 ### Step 3 :
 #### Terminal command 
-```
+```bash 
 php artisan migrate
 
 ```
@@ -301,7 +303,7 @@ php artisan migrate
 
 ### Step 1 :
 #### Terminal command
-```
+```bash
 php artisan make:migration add_address_to_users_table --table=users
 
 ```
@@ -309,7 +311,7 @@ php artisan make:migration add_address_to_users_table --table=users
 
 ### Step 2 :
 #### Add new migration file
-```
+```php
 public function up(): void
     {
         Schema::table(customers, function (Blueprint $table) {
@@ -341,7 +343,7 @@ public function up(): void
 
 ### Step 3 :
 #### Terminal command 
-```
+```bash
 php artisan migrate
 
 ```
@@ -366,7 +368,7 @@ php artisan migrate
 
 ### Step 1 :
 #### Go to Product Model and use SoftDeletes 
-```
+```php
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
@@ -379,7 +381,7 @@ class Product extends Model
 
 ### Step 2 :
 #### Terminal command 
-```
+```bash
 php artisan make:migration add_deleted_at_to_products_table --table=products
 
 ```
@@ -388,7 +390,7 @@ php artisan make:migration add_deleted_at_to_products_table --table=products
 
 ### Step 3 :
 #### add_deleted_at_to_products_table   of include
-```
+```php
 public function up()
     {
         Schema::table('products', function (Blueprint $table) {
@@ -408,7 +410,7 @@ public function down()
 
 ### Step 4 :
 #### Terminal command 
-```
+```bash
 php artisan migrate
 
 ```
@@ -419,7 +421,7 @@ php artisan migrate
 <br/>
 
 ### ProductController softDelete
-```
+```php
     public function trash(){
         return view('admin.product.trash-product', [
             'products' => Product::onlyTrashed()->get()
@@ -437,7 +439,7 @@ php artisan migrate
 <br/>
 
 ### ProductController Hard Delete
-```
+```php
     public function forceDelete($id){
         $product = Product::withTrashed()->find($id);
         $product->forceDelete();
@@ -470,7 +472,7 @@ ORM গুলো সাধারণত database query, data insert, update এ�
 </p>
 
 #### For Example insert query  
-```
+```php
 DB::table('users')->insert([
     'name' => 'John Doe',
     'email' => 'johndoe@example.com',
@@ -479,7 +481,7 @@ DB::table('users')->insert([
 ```
 
 #### For Example update  query  
-```
+```php
 DB::table('users')
     ->where('id', 1)
     ->update(['name' => 'John Doe', 'email' => 'johndoe@example.com']);
@@ -487,13 +489,13 @@ DB::table('users')
 ```
 
 #### For Example delete query  
-```
+```php
 DB::table('users')->where('id', 1)->delete();
 
 ```
+[ORM Link](https://w3programmers.com/bangla/eloquent-basics/ "ORM Link")
 
 
-#### For ORM Link: https://w3programmers.com/bangla/eloquent-basics/
 
 
 <br/>
@@ -505,7 +507,7 @@ DB::table('users')->where('id', 1)->delete();
 ### For Example @stack : 
 
 ####  app.blade.php
-```
+```php
     <html>
     <head>
         <title>Website</title>
@@ -523,7 +525,7 @@ DB::table('users')->where('id', 1)->delete();
 ### For Example  @push : 
 
 ####  home.blade.php
-```
+```php
     @extends('layouts.app')
     @section('content')
         <div>Hello World</div>
@@ -543,7 +545,7 @@ DB::table('users')->where('id', 1)->delete();
 
 <p>In a relational database, a foreign key is a column or a set of columns that refers to the primary key or a unique key of another table. A foreign key constraint is a way to enforce referential integrity between the data in two tables.</p>
 
-```
+```php
    Schema::create('orders', function (Blueprint $table) {
     $table->id();
     $table->unsignedBigInteger('user_id');
@@ -552,7 +554,7 @@ DB::table('users')->where('id', 1)->delete();
 });
 
 ```
-```
+```php
 Schema::table('orders', function (Blueprint $table) {
     $table->unsignedBigInteger('user_id');
     $table->foreign('user_id')
@@ -571,7 +573,7 @@ Schema::table('orders', function (Blueprint $table) {
  <br/>
 
 ### Migrate Customer Table 
-```
+```php
 Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -582,7 +584,7 @@ Schema::create('customers', function (Blueprint $table) {
 ```
 
 ### Migrate Phone Table 
-```
+```php
 Schema::create('phones', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -593,7 +595,7 @@ Schema::create('phones', function (Blueprint $table) {
 
 ```
 ### For Customer Model 
-```
+```php
 class Customer extends Model
 {
     use HasFactory;
@@ -605,7 +607,7 @@ class Customer extends Model
 
 ```
 ### For Phone Model 
-```
+```php
  class Phone extends Model
 {
     use HasFactory;
@@ -618,7 +620,7 @@ class Customer extends Model
 ```
 
 ### Controller Function 
-```
+```php
 public function oneToOne(){
          $customers = Customer::all();
         return view('eloquentRelationship.oneToOne', compact('customers'));
@@ -627,7 +629,7 @@ public function oneToOne(){
 ```
 
 ### View For blade file
-```
+```php
 @foreach($customers as $data)
     <tr>
         <th scope="row">{{ $data->id }}</th>
@@ -651,7 +653,7 @@ public function oneToOne(){
  <br/>
 
 ### Comment Model  
-```
+```php
 class Comment extends Model
 {
     use HasFactory;
@@ -662,7 +664,7 @@ class Comment extends Model
 }
 ```
 ### Post Model  
-```
+```php
 class Post extends Model
 {
     use HasFactory;
@@ -695,7 +697,7 @@ class Post extends Model
 <br/>
 
 ### Mechanic Model  
-```
+```php
 class Mechanic extends Model
 {
     use HasFactory;
@@ -716,7 +718,7 @@ class Mechanic extends Model
 <br/>
 
 ### Controller method   
-```
+```php
 public function hasOneThrough(){
 
     $mechanic = Mechanic::with('carWoner')->get();
@@ -745,7 +747,7 @@ public function hasOneThrough(){
  <br/>
 
 ### Produces Table   
-```
+```php
 public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
@@ -759,7 +761,7 @@ public function up(): void
  <br/>
 
 ### Tag Table   
-```
+```php
 public function up(): void
     {
         Schema::create('tags', function (Blueprint $table) {
@@ -772,7 +774,7 @@ public function up(): void
  <br/>
 
 ### ProducesTag Table   
-```
+```php
 public function up(): void
     {
         Schema::create('product_tags', function (Blueprint $table) {
@@ -791,7 +793,7 @@ public function up(): void
 ## Relation three Model
 - 
 ### Produces Model   
-```
+```php
     protected $gureded = [];
 
     function tags(){
@@ -801,7 +803,7 @@ public function up(): void
  
  
  ### Tag Model   
-```
+```php
     protected $gureded = [];
 
     function products(){
@@ -810,7 +812,7 @@ public function up(): void
 ```
 
 ### ProducesTag Model   
-```
+```php
     protected $gureded = [];
 ```
  
@@ -818,7 +820,7 @@ public function up(): void
 
 ## Sevaral way show  Output
 
-```
+```php
    //return Product::with('tags')->find(2);
    return Tag::with('products')->get();
 ```
@@ -831,10 +833,9 @@ public function up(): void
 
 <p>Query parameters are added to the end of a URL after a question mark ? and consist of one or more key-value pairs, separated by an ampersand &. For example, consider the following URL with query parameters: </p>
 
-```
-https://example.com/search?q=apple&category=fruits
+[Link](https://example.com/search?q=apple&category=fruits "Query Parameter Link")
 
-```
+
 
 
 <p>In this URL, q and category are the keys, and apple and fruits are the corresponding values. The server can extract the values of these parameters and use them to perform a search or filter the results.</p>
