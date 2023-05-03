@@ -734,10 +734,92 @@ public function hasOneThrough(){
 
 
 
+<h2 align="center">Many to Many Relation</h2>
+ <br/>
+### There have a three Table
+- Produces
+- Tags
+- Product-Tags
+ <br/>
 
+### Produces Table   
+```
+public function up(): void
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('price');
+            $table->timestamps();
+        });
+    }
+```
+ <br/>
 
+### Tag Table   
+```
+public function up(): void
+    {
+        Schema::create('tags', function (Blueprint $table) {
+            $table->id();
+            $table->string('tag_name');
+            $table->timestamps();
+        });
+    }
+```
+ <br/>
+
+### ProducesTag Table   
+```
+public function up(): void
+    {
+        Schema::create('product_tags', function (Blueprint $table) {
+            $table->id();
+
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('products');
+            $table->unsignedBigInteger('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags');
+            $table->timestamps();
+        });
+    }
+```
 <br/>
+
+## Relation three Model
+- 
+### Produces Model   
+```
+    protected $gureded = [];
+
+    function tags(){
+        return $this->belongsToMany(Tag::class, 'product_tags');
+    }
+```
+ 
+ 
+ ### Tag Model   
+```
+    protected $gureded = [];
+
+    function products(){
+        return $this->belongsToMany(Product::class, 'product_tags');
+    }
+```
+
+### ProducesTag Model   
+```
+    protected $gureded = [];
+```
+ 
 <br/>
+
+## Sevaral way show  Output
+
+```
+   //return Product::with('tags')->find(2);
+   return Tag::with('products')->get();
+```
 
 # Query Parameter 
  <br/>
@@ -755,9 +837,6 @@ https://example.com/search?q=apple&category=fruits
 
 <p>In this URL, q and category are the keys, and apple and fruits are the corresponding values. The server can extract the values of these parameters and use them to perform a search or filter the results.</p>
 
-
-<h2 align="center">Many to Many Relation</h2>
- <br/>
 
 
  <br/>
