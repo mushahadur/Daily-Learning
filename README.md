@@ -20,7 +20,7 @@
  | 07 | @stack() and      @push()      @endpush |
  | 08 | Foreign key use  |
  | 09 | Database Relationship |
- | 09 | Query Parameter |
+ | 10 | Query Parameter |
 
 <!-- all link is here -->
 
