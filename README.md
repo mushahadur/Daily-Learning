@@ -736,6 +736,7 @@ public function hasOneThrough(){
 
 <h2 align="center">Many to Many Relation</h2>
  <br/>
+ 
 ### There have a three Table
 - Produces
 - Tags
