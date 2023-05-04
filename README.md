@@ -825,12 +825,15 @@ public function up(): void
    return Tag::with('products')->get();
 ```
 
-## Many-to-many-polyMorphic-relationship-laravel
+<h2 align="center">Many-to-many-polyMorphic-relationship-laravel</h2>
+ <br/>
+<!--  # Many-to-many-polyMorphic-relationship-laravel -->
 
 <br/>
 
 <!-- ![profile](./images/me.jpg) -->
-<img  align="center"  src="images/poly-relationship-laravel.png" width="800" title="Drow SQL"/>
+<img  align="center" src="./images/poly-relationship.png" height="250" width="700" title="poly-relationship"/>
+<!-- <img  align="center"  src="images/poly-relationship-laravel.png" width="800" title="Drow SQL"/> -->
 <br/>
 
 
