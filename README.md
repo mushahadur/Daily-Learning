@@ -825,6 +825,95 @@ public function up(): void
    return Tag::with('products')->get();
 ```
 
+<br>
+<br>
+
+
+
+
+<h2 align="center">Many-to-many-polyMorphic-relationship-laravel</h2>
+
+ <br/>
+
+
+<br/>
+
+
+<img  align="center" src="./images/poly-relationship.png" height="250" width="700" title="poly-relationship"/>
+
+
+
+
+### This is the comment table Schema: 
+
+```php
+Schema::create('comments', function (Blueprint $table) {
+    $table->increments('id');
+    $table->morphs('commentable');
+    $table->text('comment')->nullable();
+    $table->timestamps();
+});
+
+```
+
+<br>
+
+### This is Image Model comment Function
+
+```php
+public function comments()
+{
+    return $this->morphMany(Comment::class,'commentable');
+     //App\Models\ImageModel
+}
+```
+
+<br>
+
+### This is Post Model comment Function
+
+```php
+public function comments()
+{
+    return $this->morphMany(Comment::class,'commentable');
+                //App\Models\PostModel
+}
+```
+
+
+<br>
+
+### How to get All post with comment By HomeController 
+
+```php
+function blogIndex(){
+    $post = PostModel::with('comments')->orderBy('id', 'desc')->take(4)->get();
+    return view('website.pages.blog_page',compact('post') );
+}
+
+```
+
+
+<br>
+
+### How to get All Image with comment By HomeController 
+
+```php
+function imageIndex(){
+        $image = ImageModel::with('comments')->orderBy('id', 'desc')->take(6)->get();
+
+
+        return view('website.pages.image_page',compact('image'));
+     }
+```
+
+[Polymorphic Relationships Link](https://blog.logrocket.com/polymorphic-relationships-laravel/ "Polymorphic Relationships Link")
+
+<br>
+<br>
+
+
+
 # Query Parameter 
  <br/>
 
