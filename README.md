@@ -836,7 +836,7 @@ public function up(): void
 <br/>
 
 
-<img  align="center" src="./images/poly-relationship.png" height="550" width="700" title="poly-relationship"/>
+<img  align="center" src="./images/poly-relationship.png" height="350" width="700" title="poly-relationship"/>
 
 <br/>
 
