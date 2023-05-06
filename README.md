@@ -18,33 +18,6 @@
   - [Example 1](#example-1)
   - [Example 2](#example-2)
 
-## Introduction {#introduction}
-
-Welcome to the application.
-
-## Getting Started {#getting-started}
-
-This section will help you get started with the application.
-
-### Installation {#installation}
-
-To install the application, follow these steps...
-
-### Configuration {#configuration}
-
-To configure the application, edit the `config.ini` file...
-
-## Usage {#usage}
-
-Here are some examples of how to use the application.
-
-### Example 1 {#example-1}
-
-To run example 1, type the following command...
-
-### Example 2 {#example-2}
-
-To run example 2, type the following command...
 
 
 
@@ -980,6 +953,33 @@ function imageIndex(){
 
 
 
+## Introduction {#introduction}
+
+Welcome to the application.
+
+## Getting Started {#getting-started}
+
+This section will help you get started with the application.
+
+### Installation {#installation}
+
+To install the application, follow these steps...
+
+### Configuration {#configuration}
+
+To configure the application, edit the `config.ini` file...
+
+## Usage {#usage}
+
+Here are some examples of how to use the application.
+
+### Example 1 {#example-1}
+
+To run example 1, type the following command...
+
+### Example 2 {#example-2}
+
+To run example 2, type the following command...
 
 
 
