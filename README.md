@@ -34,7 +34,7 @@
   - [One to Many](#one-2-many)
   - [Has One Through](#has-1-through)
   - [Many to Many Relation](#many-2-many)
-  - [Many to many polyMorphic Relationship](#many-2-many-polyMorphic)
+  - [Many to many polyMorphic Relationship](#many-2-many-polymorphic)
 - [Query Parameter](#query-parameter)
 
 <br/>
@@ -868,7 +868,7 @@ public function up(): void
    <br/>
   <br/>
 
-<h2 align="center"><a name="many-2-many-polyMorphic">Many to many polyMorphic Relationship </a></h2> 
+<h2 align="center"><a name="many-2-many-polymorphic">Many to many polyMorphic Relationship </a></h2> 
 
 <br/>
 <br/>
