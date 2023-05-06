@@ -11,32 +11,32 @@
 # Table of Contents
 
 - [Introduction](#introduction)
-- [Data pass to view blade file](#Data-pass)
+- [Data pass to view blade file](#data-pass)
   - [Using the view() function](#view-function)
   - [Using the with() method](#with-method)
   - [Using the compact()](#compact)
-  - [Fetch the data in the controller](#Fetch-the-data)
+  - [Fetch the data in the controller](#fetch-the-data)
 
 - [Abstraction Vs Interfaces](#Abstraction-Interfaces)
   - [What is the trait in PHP](#trait-in-PHP)
 
 - [Laravel Add a new column to existing table in a migration](#add-column)
   - [Normal Way](#normal-way)
-  - [Way of the foreign key](#Way-of-foreign-key)
+  - [Way of the foreign key](#way-of-foreign-key)
 
 - [Types of delete for Laravel](#types-of-delete)
-  - [Soft Delete](#Soft-Delete)
-  - [Hard Delete](#Hard-Delete)
+  - [Soft Delete](#soft-delete)
+  - [Hard Delete](#hard-delete)
 
-- [Laravel Eloquent ORM](#Laravel-Eloquent-ORM)
+- [Laravel Eloquent ORM](#laravel-eloquent)
 
 - [ @stack() and @push() @endpush](#stack-push)
   - [Stack](#stack)
   - [Push](#push)
 
-- [Use of Foreign key](#Use-Foreign-key)
+- [Use of Foreign key](#use-foreign-key)
 - [Database Relationship](#"database-relationship)
-- [Query Parameter](#Query-Parameter)
+- [Query Parameter](#query-parameter)
 
 <br/>
 <br/>
@@ -69,7 +69,7 @@
 <br/>
 
 
-## Data pass to view blade file <a name="Data-pass"></a>
+## Data pass to view blade file <a name="data-pass"></a>
 
 ### 1. Using the view() function <a name="view-function"></a>
 
@@ -165,7 +165,7 @@
 
 <br/>
 
-### 4. Fetch the data in the controller : <a name="Fetch-the-data"></a>
+### 4. Fetch the data in the controller : <a name="fetch-the-data"></a>
 <p> In your controller, you can fetch the data from the database using the model you just created.
 
  For example:
@@ -332,7 +332,7 @@ php artisan migrate
 <br/>
 <br/>
 
-### Way of the foreign key: <a name="Way-of-foreign-key"></a>
+### Way of the foreign key: <a name="way-of-foreign-key"></a>
  
 <br/>
 <!-- ![profile](./images/me.jpg) -->
@@ -394,7 +394,7 @@ php artisan migrate
 
 ## Types of delete for Laravel:<a name="types-of-delete"></a>
 
-### Soft Delete :<a name="Soft-Delete"></a> 
+### Soft Delete :<a name="soft-delete"></a> 
  <p>  Soft delete is a feature in Laravel that allows you to delete records without actually removing them from the database. Instead, Laravel marks the record as "deleted" by adding a timestamp to the deleted_at column of the table. This makes it possible to recover deleted records if needed. To use soft delete, you need to add the SoftDeletes trait to your model class and add a deleted_at column to your database table. </p>
 
  <img  align="center"  src="images/5.png" width="600" title="Soft delete"/>
@@ -476,7 +476,7 @@ php artisan migrate
 ```
 <br/>
 
-### ProductController Hard Delete <a name="Hard-Delete"></a>
+### ProductController Hard Delete <a name="hard-delete"></a>
 ```php
     public function forceDelete($id){
         $product = Product::withTrashed()->find($id);
@@ -492,7 +492,7 @@ php artisan migrate
 
 <br/>
 
-## Laravel Eloquent ORM:<a name="Laravel-Eloquent-ORM"></a>
+## Laravel Eloquent ORM:<a name="laravel-eloquent"></a>
 
 ### English Short note : 
 <p> ORM stands for Object-Relational Mapping. It is a technique that developers use an object-oriented programming method Allows you to interact with relational databases. Generally, developers have to write different types of SQL queries to interact with the database. which is time-consuming and error-prone. With an ORM, developers can work with objects in the programming language of their choice. Simply put, ORM objects act as translators between developers and their databases. Basically, ORMs provide an abstraction layer between the application code and the database. Which makes code easier to write and maintain. ORMs Developers with low-level database details such as tables, columns and SQL statements Allows working with high-level abstractions like objects and classes instead of functions.
@@ -579,7 +579,7 @@ DB::table('users')->where('id', 1)->delete();
 <br/>
 <br/>
 
-## Use of Foreign key <a name="Use-Foreign-key"></a>
+## Use of Foreign key <a name="use-foreign-key"></a>
 
 <p>In a relational database, a foreign key is a column or a set of columns that refers to the primary key or a unique key of another table. A foreign key constraint is a way to enforce referential integrity between the data in two tables.</p>
 
@@ -949,7 +949,7 @@ function imageIndex(){
 <br>
 
 
-# Query Parameter <a name="Query-Parameter"></a> 
+# Query Parameter <a name="query-parameter"></a> 
  <br/>
 
 <p>A query parameter, also known as a query string parameter or URL parameter, is a way to pass data from a client (such as a web browser) to a server as part of a URL.</p>
