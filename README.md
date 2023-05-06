@@ -17,7 +17,7 @@
   - [Using the compact()](#compact)
   - [Fetch the data in the controller](#fetch-the-data)
 - [Abstraction Vs Interfaces](#Abstraction-Interfaces)
-  - [What is the trait in PHP](#trait-in-PHP)
+  - [What is the trait in PHP](#trait-in-php)
 - [Laravel Add a new column to existing table in a migration](#add-column)
   - [Normal Way](#normal-way)
   - [Way of the foreign key](#way-of-foreign-key)
@@ -230,7 +230,7 @@
 
 
 
-### What is the trait in PHP: <a name="trait-in-PHP"></a>
+### What is the trait in PHP: <a name="trait-in-php"></a>
 
 ### 1. Using the view() function
 
