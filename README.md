@@ -13,18 +13,34 @@
 - [Introduction](#introduction)
 - [Data pass to view blade file](#Data-pass)
   - [Using the view() function](#view-function)
-  - [Configuration](#configuration)
-- [Usage](#usage)
-  - [Example 1](#example-1)
-  - [Example 2](#example-2)
+  - [Using the with() method](#with-method)
+  - [Using the compact()](#compact)
+  - [Fetch the data in the controller](#Fetch-the-data)
 
+- [Abstraction Vs Interfaces](#Abstraction-Interfaces)
+  - [What is the trait in PHP](#trait-in-PHP)
 
+- [Laravel Add a new column to existing table in a migration](#add-column)
+  - [Normal Way](#normal-way)
+  - [Way of the foreign key](#Way-of-foreign-key)
 
+- [Types of delete for Laravel](#types-of-delete)
+  - [Soft Delete](#Soft-Delete)
+  - [Hard Delete](#Hard-Delete)
+
+- [Laravel Eloquent ORM](#Laravel-Eloquent-ORM)
+
+- [ @stack() and @push() @endpush](#stack-push)
+  - [Stack](#stack)
+  - [Push](#push)
+
+- [Use of Foreign key](#Use-Foreign-key)
+- [Database Relationship](#"database-relationship)
+- [Query Parameter](#Query-Parameter)
 
 <br/>
 <br/>
 <br/>
-
 
 ## Introduction <a name="introduction"></a>
 
@@ -48,14 +64,12 @@
 
 <!-- all link is here -->
 
-    
 <br/>
 <br/>
 <br/>
 
 
 ## Data pass to view blade file <a name="Data-pass"></a>
-
 
 ### 1. Using the view() function <a name="view-function"></a>
 
@@ -81,7 +95,7 @@
 
 
 
-###   2. Using the with() method:
+### 2. Using the with() method: <a name="with-method"></a>
 <p> You can also use the with() method to pass data to the view. This method allows you to chain multiple calls together to pass multiple pieces of data.
  
  For example:
@@ -130,9 +144,7 @@
 
 
 
-
-
-###   3. Using the compact() :
+### 3. Using the compact() : <a name="compact"></a>
 <p> You can use the compact() function to create an array of variables and their values, which can then be passed to the view. 
 
  For example:
@@ -153,7 +165,7 @@
 
 <br/>
 
-###   4. Fetch the data in the controller  :
+### 4. Fetch the data in the controller : <a name="Fetch-the-data"></a>
 <p> In your controller, you can fetch the data from the database using the model you just created.
 
  For example:
@@ -188,7 +200,7 @@
 
 <br/>
 
-## Abstraction Vs Interfaces:
+## Abstraction Vs Interfaces: <a name="Abstraction-Interfaces"></a>
 
 ### Abstraction : 
  <p> The main reason for using abstraction is to hide unnecessary details from the user. Only relevant data from a large program is shown to the user. It also helps to reduce the complexity of the program. </p>
@@ -219,9 +231,9 @@
 
 
 
-## What is the trait in PHP:
+### What is the trait in PHP: <a name="trait-in-PHP"></a>
 
-###   1. Using the view() function
+### 1. Using the view() function
 
 <p>Usually PHP is called Single Inheritance Language, that is, PHP Language does not support Multiple Inheritance. And Trait is a new concept to remove the limitations of Single Inheritance in PHP OOP and use Multiple Inheritance. which was first used in PHP 5.4. Traits are much like classes, Traits are defined like classes using the trait keyword. However, an object like a class cannot be created from it. But properties and methods of multiple traits can be used in a single class. Now let's understand better through an example:</p>
 
@@ -270,9 +282,9 @@
 
 <br/>
 
-## Laravel Add a new column to existing table in a migration:
+## Laravel Add a new column to existing table in a migration: <a name="add-column"></a>
 
-###   1. Normal Way:
+### 1. Normal Way: <a name="normal-way"></a>
  
 <br/>
 <!-- ![profile](./images/me.jpg) -->
@@ -320,7 +332,7 @@ php artisan migrate
 <br/>
 <br/>
 
-## Way of the foreign key:
+### Way of the foreign key: <a name="Way-of-foreign-key"></a>
  
 <br/>
 <!-- ![profile](./images/me.jpg) -->
@@ -380,9 +392,9 @@ php artisan migrate
 
 <br/>
 
-# Types of delete for Laravel:
+## Types of delete for Laravel:<a name="types-of-delete"></a>
 
-### Soft Delete : 
+### Soft Delete :<a name="Soft-Delete"></a> 
  <p>  Soft delete is a feature in Laravel that allows you to delete records without actually removing them from the database. Instead, Laravel marks the record as "deleted" by adding a timestamp to the deleted_at column of the table. This makes it possible to recover deleted records if needed. To use soft delete, you need to add the SoftDeletes trait to your model class and add a deleted_at column to your database table. </p>
 
  <img  align="center"  src="images/5.png" width="600" title="Soft delete"/>
@@ -464,7 +476,7 @@ php artisan migrate
 ```
 <br/>
 
-### ProductController Hard Delete
+### ProductController Hard Delete <a name="Hard-Delete"></a>
 ```php
     public function forceDelete($id){
         $product = Product::withTrashed()->find($id);
@@ -480,7 +492,7 @@ php artisan migrate
 
 <br/>
 
-# Laravel Eloquent ORM:
+## Laravel Eloquent ORM:<a name="Laravel-Eloquent-ORM"></a>
 
 ### English Short note : 
 <p> ORM stands for Object-Relational Mapping. It is a technique that developers use an object-oriented programming method Allows you to interact with relational databases. Generally, developers have to write different types of SQL queries to interact with the database. which is time-consuming and error-prone. With an ORM, developers can work with objects in the programming language of their choice. Simply put, ORM objects act as translators between developers and their databases. Basically, ORMs provide an abstraction layer between the application code and the database. Which makes code easier to write and maintain. ORMs Developers with low-level database details such as tables, columns and SQL statements Allows working with high-level abstractions like objects and classes instead of functions.
@@ -528,9 +540,9 @@ DB::table('users')->where('id', 1)->delete();
 
 
 
-# @stack() and      @push()      @endpush:
+## @stack() and @push() @endpush::<a name="stack-push"></a>
 
-### For Example @stack : 
+### For Example @stack : <a name="stack"></a>
 
 ####  app.blade.php
 ```php
@@ -548,7 +560,7 @@ DB::table('users')->where('id', 1)->delete();
     </body>
     </html>
 ```
-### For Example  @push : 
+### For Example  @push : <a name="push"></a>
 
 ####  home.blade.php
 ```php
@@ -567,7 +579,7 @@ DB::table('users')->where('id', 1)->delete();
 <br/>
 <br/>
 
-# Use of Foreign key 
+## Use of Foreign key <a name="Use-Foreign-key"></a>
 
 <p>In a relational database, a foreign key is a column or a set of columns that refers to the primary key or a unique key of another table. A foreign key constraint is a way to enforce referential integrity between the data in two tables.</p>
 
@@ -593,7 +605,7 @@ Schema::table('orders', function (Blueprint $table) {
 <br/>
 <br/>
 
-# Database Relationship 
+## Database Relationship <a name="database-relationship"></a> 
 
 <h2 align="center">One to One</h2>
  <br/>
@@ -937,7 +949,7 @@ function imageIndex(){
 <br>
 
 
-# Query Parameter 
+# Query Parameter <a name="Query-Parameter"></a> 
  <br/>
 
 <p>A query parameter, also known as a query string parameter or URL parameter, is a way to pass data from a client (such as a web browser) to a server as part of a URL.</p>
