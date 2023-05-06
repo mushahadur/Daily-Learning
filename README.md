@@ -606,6 +606,8 @@ Schema::table('orders', function (Blueprint $table) {
 
 ## Database Relationship <a name="database-relationship"></a> 
 
+---
+
 <h2 align="center"><a name="one-2-one"> One to One</a></h2> 
  <br/>
 
@@ -685,8 +687,8 @@ public function oneToOne(){
 
 <br/>
 
+<h2 align="center"><a name="one-2-many"> One to Many</a></h2> 
 
-<h2 align="center">One to Many</h2>
  <br/>
 
 ### Comment Model  
@@ -717,8 +719,8 @@ class Post extends Model
 }
 ```
 
+<h2 align="center"><a name="has-1-through">Has One Through </a></h2> 
 
-<h2 align="center">Has One Through</h2>
  <br/>
 
 ### There have a three Table
@@ -773,8 +775,8 @@ public function hasOneThrough(){
 
 
 
+<h2 align="center"><a name="many-2-many">Many to Many Relation </a></h2> 
 
-<h2 align="center">Many to Many Relation</h2>
  <br/>
 
 ### There have a three Table
@@ -866,18 +868,12 @@ public function up(): void
    <br/>
   <br/>
 
-<h2 align="center">Many to many polyMorphic relationship</h2>
- <br/>
-
+<h2 align="center"><a name="many-2-many-polyMorphic">Many to many polyMorphic Relationship </a></h2> 
 
 <br/>
-
-
+<br/>
 <img  align="center" src="./images/poly-relationship.png" height="350" width="700" title="poly-relationship"/>
-
 <br/>
-
-
 
 ### This is the comment table Schema: 
 
