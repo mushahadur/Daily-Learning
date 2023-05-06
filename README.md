@@ -16,26 +16,25 @@
   - [Using the with() method](#with-method)
   - [Using the compact()](#compact)
   - [Fetch the data in the controller](#fetch-the-data)
-
 - [Abstraction Vs Interfaces](#Abstraction-Interfaces)
   - [What is the trait in PHP](#trait-in-PHP)
-
 - [Laravel Add a new column to existing table in a migration](#add-column)
   - [Normal Way](#normal-way)
   - [Way of the foreign key](#way-of-foreign-key)
-
 - [Types of delete for Laravel](#types-of-delete)
   - [Soft Delete](#soft-delete)
   - [Hard Delete](#hard-delete)
-
 - [Laravel Eloquent ORM](#laravel-eloquent)
-
 - [ @stack() and @push() @endpush](#stack-push)
   - [Stack](#stack)
   - [Push](#push)
-
 - [Use of Foreign key](#use-foreign-key)
 - [Database Relationship](#database-relationship)
+  - [One to One](#one-2-one)
+  - [One to Many](#one-2-many)
+  - [Has One Through](#has-1-through)
+  - [Many to Many Relation](#many-2-many)
+  - [Many to many polyMorphic Relationship](#many-2-many-polyMorphic)
 - [Query Parameter](#query-parameter)
 
 <br/>
@@ -607,7 +606,7 @@ Schema::table('orders', function (Blueprint $table) {
 
 ## Database Relationship <a name="database-relationship"></a> 
 
-<h2 align="center">One to One</h2>
+<h2 align="center"><a name="one-2-one"> One to One</a></h2> 
  <br/>
 
 ### Migrate Customer Table 
