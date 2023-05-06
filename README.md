@@ -26,7 +26,7 @@
 <br/>
 
 
-## introduction <a name="introduction"></a>
+## Introduction <a name="introduction"></a>
 
 <p>When I learn in daily life, then I put the main topic with an explanation. Because of I quick remind in my valuable information. So, under the same table of content.</p> 
 
@@ -51,10 +51,11 @@
     
 <br/>
 <br/>
-
 <br/>
 
+
 ## Data pass to view blade file <a name="Data-pass"></a>
+
 
 ### 1. Using the view() function <a name="view-function"></a>
 
