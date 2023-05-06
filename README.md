@@ -43,9 +43,9 @@
 <br/>
 <br/>
 
-## Data pass to view blade file {#Data-pass}
+## Data pass to view blade file <a name="Data-pass"></a>
 
-### 1. Using the view() function {#view-function}
+### 1. Using the view() function <a name="view-function"></a>
 
 <p>You can use the view() function to return a view and pass data to it as an array or an instance of the Illuminate\Contracts\Support\Arrayable interface.
 
