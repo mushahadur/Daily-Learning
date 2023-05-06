@@ -16,7 +16,7 @@
   - [Using the with() method](#with-method)
   - [Using the compact()](#compact)
   - [Fetch the data in the controller](#fetch-the-data)
-- [Abstraction Vs Interfaces](#Abstraction-Interfaces)
+- [Abstraction Vs Interfaces](#abstraction-interfaces)
   - [What is the trait in PHP](#trait-in-php)
 - [Laravel Add a new column to existing table in a migration](#add-column)
   - [Normal Way](#normal-way)
@@ -199,7 +199,7 @@
 
 <br/>
 
-## Abstraction Vs Interfaces: <a name="Abstraction-Interfaces"></a>
+## Abstraction Vs Interfaces: <a name="abstraction-interfaces"></a>
 
 ### Abstraction : 
  <p> The main reason for using abstraction is to hide unnecessary details from the user. Only relevant data from a large program is shown to the user. It also helps to reduce the complexity of the program. </p>
