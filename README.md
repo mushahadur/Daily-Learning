@@ -11,8 +11,8 @@
 # Table of Contents
 
 - [Introduction](#introduction)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
+- [Data pass to view blade file](#Data-pass)
+  - [Using the view() function](#view-function)
   - [Configuration](#configuration)
 - [Usage](#usage)
   - [Example 1](#example-1)
@@ -43,9 +43,9 @@
 <br/>
 <br/>
 
-## Data pass to view blade file 
+## Data pass to view blade file {#Data-pass}
 
-###   1. Using the view() function
+### 1. Using the view() function {#view-function}
 
 <p>You can use the view() function to return a view and pass data to it as an array or an instance of the Illuminate\Contracts\Support\Arrayable interface.
 
@@ -953,33 +953,6 @@ function imageIndex(){
 
 
 
-## Introduction {#introduction}
-
-Welcome to the application.
-
-## Getting Started {#getting-started}
-
-This section will help you get started with the application.
-
-### Installation {#installation}
-
-To install the application, follow these steps...
-
-### Configuration {#configuration}
-
-To configure the application, edit the `config.ini` file...
-
-## Usage {#usage}
-
-Here are some examples of how to use the application.
-
-### Example 1 {#example-1}
-
-To run example 1, type the following command...
-
-### Example 2 {#example-2}
-
-To run example 2, type the following command...
 
 
 
