@@ -35,7 +35,7 @@
   - [Push](#push)
 
 - [Use of Foreign key](#use-foreign-key)
-- [Database Relationship](#"database-relationship)
+- [Database Relationship](#database-relationship)
 - [Query Parameter](#query-parameter)
 
 <br/>
