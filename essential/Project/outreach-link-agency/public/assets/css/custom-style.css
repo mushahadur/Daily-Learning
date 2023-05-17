@@ -1,0 +1,708 @@
+/* =====================================
+          Custom CSS Here
+===================================== */
+:root {
+    --custom-bg: #896cfe;
+    --hvr: #6f8afe;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.tag-muted {
+    color: var(--muted);
+}
+.tag:not(.badge-pill) {
+    border-radius: 4px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.tag {
+    background: rgba(68, 68, 68, 0.05);
+    box-sizing: border-box;
+    color: #444;
+    display: inline-block;
+    font-family: Open Sans, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    padding: 2px 10px;
+    text-align: center;
+}
+
+.badge {
+    padding: 6px 12px;
+}
+
+.btn-otr-primary {
+    color: #fff;
+    background-color: var(--custom-bg);
+    border-color: var(--custom-bg);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.btn-otr-primary:hover {
+    color: #fff;
+    background-color: var(--hvr);
+    border-color: var(--hvr);
+}
+
+.btn-otr-outline-primary.active:hover {
+    color: #fff;
+    background-color: var(--hvr);
+    border-color: var(--hvr);
+}
+
+.btn-otr-outline-primary.active {
+    color: #fff;
+    background-color: var(--custom-bg);
+    border-color: var(--custom-bg);
+}
+
+.form-check-input:checked {
+    background-color: var(--custom-bg) !important;
+    border-color: var(--custom-bg) !important;
+}
+
+.not-allowed {
+    cursor: not-allowed !important;
+}
+
+#basic-addon3 {
+    background-color: var(--hvr);
+    color: #ffffff;
+}
+
+.account-pages .login-img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-image: linear-gradient(to right, #2bd2fb, #8f67ff);
+}
+.account-pages .login-img img {
+    margin-top: 50%;
+    transform: translateY(-45%);
+}
+.account-pages .login-btn button {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    line-height: 35px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--custom-bg);
+    background-color: #fff;
+    border: 1px solid var(--custom-bg);
+    transition: 0.4s ease;
+}
+.account-pages .login-btn button:hover {
+    background-color: var(--custom-bg);
+    color: #fff;
+}
+.account-pages .login-btn a {
+    transition: 0.4s ease;
+}
+.account-pages .login-btn button:hover a {
+    color: #fff;
+}
+.card-data-table {
+    border-radius: 0.6rem;
+}
+
+.data-table th {
+    background-color: #d5d1defe;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+.mdc-data-table__cell {
+    height: 40px !important;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    background-clip: padding-box;
+    background-color: #fff !important;
+    border: 1px solid #d1d3e2 !important;
+    border-radius: 0.35rem !important;
+    color: #6e707e !important;
+    font-size: 1rem;
+    font-weight: 400;
+    height: calc(1.5em + 0.75rem + 2px);
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-shadow: none;
+    outline: none;
+    margin-left: 15px;
+}
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #d1d3e2 !important;
+    border-radius: 0.35rem;
+    color: #6e707e !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem !important;
+    background-color: transparent;
+    margin-left: 3px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+    background: #fff !important;
+    border: 1px solid var(--custom-bg) !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 10px !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: var(--custom-bg) !important;
+}
+.paginate_button.previous,
+.paginate_button.next {
+    text-transform: uppercase;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: var(--custom-bg, #6200ee) !important;
+    border: transparent !important;
+    color: #fff !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: var(--hvr, #6200ee) !important;
+    border: var(--hvr, #6200ee) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+    cursor: default;
+    color: #fff !important;
+    border: 1px solid transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    min-width: 64px !important;
+    border-radius: 4px !important;
+}
+
+.header-style {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    color: #896cfe;
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 24px;
+}
+/* Package Details Show modal box */
+.custom-pricing-box {
+    max-width: 440px !important;
+    margin: 0 auto 0px !important;
+}
+
+.select2 {
+    width: 100% !important;
+}
+.select2 .select2-search__field {
+    width: 100% !important;
+}
+
+.word-length-for {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.select2 {
+    width: 100% !important;
+}
+.select2 .select2-search__field {
+    width: 100% !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+a.text-primary:focus,
+a.text-primary:hover {
+    color: #896cfe !important;
+}
+
+.explore-site-section {
+    margin: 1.55rem -1.3rem !important;
+    padding: 1rem 1.5rem;
+}
+
+.explore-site-section-label {
+    font-size: calc(8px + 0.75rem);
+    font-weight: bold;
+    margin: 0.55rem -1.5rem !important;
+    /* padding: 1rem 1.5rem; */
+    /* background: whitesmoke; */
+    background-color: #896cfe;
+    color: #ffffff;
+    padding: 8px 23px;
+    width: 250px;
+    display: inline-block;
+}
+.explore-site-section-content {
+    margin-top: 15px;
+}
+
+.explore-site-buy-section {
+    font-size: calc(8px + 0.75rem);
+    font-weight: bold;
+    margin: 0.55rem -1.5rem !important;
+    padding: 0rem 1.5rem 1rem 1.5rem;
+    background: whitesmoke;
+}
+
+#explore-site-content .key {
+    margin-right: 0.75rem;
+}
+
+#explore-site-content p {
+    font-size: calc(6px + 0.5rem);
+    margin-bottom: 1.5rem;
+}
+
+#explore-site-content .tag {
+    font-size: calc(6px + 0.4rem);
+}
+
+#explore-site-content .countries .flag {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#site-details .countries .flag img {
+    height: 150%;
+    object-fit: cover;
+}
+
+/* Customer dashboard Subscription plan */
+.subscription h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--custom-bg);
+}
+.subscription-text {
+    color: #a1abba;
+}
+.active-plan h2 {
+    color: #848694;
+}
+.active-plan h5 {
+    color: #a1abba;
+}
+.active-plan-details {
+    border: 1px solid #f4f0f0;
+    border-radius: 5px;
+}
+
+.subscription-plan-btn a {
+    width: 100%;
+    font-weight: 600;
+    background: none;
+    border: 1px solid var(--custom-bg);
+    border-radius: 50px;
+    color: var(--custom-bg);
+}
+/* Checkout Page CSS */
+.checkout-btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background: var(--custom-bg);
+}
+.checkout-btn a {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #fff;
+    display: block;
+}
+.checkout-btn button {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 1.2rem;
+    background: var(--custom-bg);
+    color: #fff;
+}
+
+.badge-danger {
+    background: #facfd6;
+    border: 2px solid #f8ccc8;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: red;
+}
+.badge-success {
+    background: #a0c77c;
+    border: 2px solid #95bc71;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.pagination .page-item {
+    margin: 2px;
+}
+
+.pagination .page-item .page-link {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: transparent;
+    min-width: 64px;
+}
+.pagination .page-item:hover {
+    background: var(--hvr, #6200ee) !important;
+    border: var(--hvr, #6200ee) !important;
+    border-radius: 4px;
+}
+.pagination .page-item:hover .page-link {
+    color: #fff !important;
+}
+.pagination .page-item.disabled {
+    cursor: default;
+    color: #666 !important;
+    border: 1px solid transparent;
+    background: transparent;
+    box-shadow: none;
+}
+.pagination .page-item.disabled:hover {
+    cursor: default;
+    color: #fff !important;
+    border: 1px solid transparent;
+    background: transparent;
+    box-shadow: none;
+}
+.pagination .page-item.active {
+    background: linear-gradient(
+        to bottom,
+        rgba(230, 230, 230, 0.1) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+
+    background-color: var(--custom-bg, #6200ee) !important;
+    border: transparent !important;
+    color: #fff !important;
+    border-radius: 4px;
+}
+
+.btn-toggle-options .service-option-tabs {
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+    position: absolute;
+}
+
+/* Stripe payment card design css */
+.stripe-card .form-control {
+    height: 45px;
+    font-size: 18px;
+}
+.stripe-pay-btn button {
+    font-weight: 500;
+    font-size: 16px;
+    background: var(--custom-bg);
+    color: #fff;
+    border-radius: 50px;
+    width: 100%;
+}
+
+div.dt-buttons button {
+    padding: 7px 10px;
+}
+
+.border-top-spending {
+    border: 0.15rem solid #fe9b66 !important;
+}
+
+.border-top-balance {
+    border: 0.15rem solid #ff59a9 !important;
+}
+
+.text-top-spending {
+    color: #fe9b66;
+}
+
+.text-top-balance {
+    color: #ff59a9;
+}
+
+.wallet-form-group {
+    margin-top: 1.5rem;
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+/* Balance Badge */
+.balance-badge span {
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 1rem;
+    padding: 9px 14px;
+    color: #fff;
+    background: #f46a6a !important;
+}
+.custom-alert-warning {
+    color: #fff;
+    background-color: #eeb728;
+    border-color: #eeb728;
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+.custom-alert-warning:hover {
+    color: var(--custom-bg);
+}
+
+.pagination span {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+}
+
+.pagination span.disabled {
+    cursor: not-allowed;
+    color: #999;
+    background-color: #ddd;
+    border-color: #999;
+}
+
+.modal-not-allowed {
+    color: #434e65;
+    width: 525px;
+}
+.modal-not-allowed .modal-content {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+.modal-not-allowed .modal-header {
+    background: #e85e6c;
+    border-bottom: none;
+    position: relative;
+    text-align: center;
+    margin: -20px -20px 0;
+    border-radius: 5px 5px 0 0;
+    padding: 35px;
+}
+.modal-not-allowed h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+}
+.modal-not-allowed .form-control,
+.modal-not-allowed .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+.modal-not-allowed .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.5;
+}
+.modal-not-allowed .close:hover {
+    opacity: 0.8;
+}
+.modal-not-allowed .icon-box {
+    color: #fff;
+    width: 95px;
+    height: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 9;
+    border: 5px solid #fff;
+    padding: 12px;
+    text-align: center;
+}
+.modal-not-allowed .icon-box i {
+    font-size: 42px;
+}
+.modal-not-allowed.modal-dialog {
+    margin-top: 80px;
+}
+.modal-not-allowed .btn,
+.modal-not-allowed .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #eeb711 !important;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    min-width: 150px;
+    border: none;
+}
+.modal-not-allowed .btn:hover,
+.modal-not-allowed .btn:focus {
+    background: #eda645 !important;
+    outline: none;
+}
+
+.card-not-allowed {
+    color: #434e65;
+}
+
+.card-not-allowed .card-header {
+    background: #e85e6c;
+    border-bottom: none;
+    position: relative;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    padding: 35px;
+}
+.card-not-allowed h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.card-not-allowed .form-control,
+.card-not-allowed .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.card-not-allowed .icon-box {
+    color: #fff;
+    width: 95px;
+    height: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 9;
+    border: 5px solid #fff;
+    padding: 12px;
+    text-align: center;
+}
+
+.card-not-allowed .icon-box i {
+    font-size: 42px;
+}
+
+.card-not-allowed .btn,
+.card-not-allowed .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #eeb711 !important;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    min-width: 150px;
+    border: none;
+}
+
+.noti-icon .badge {
+    padding: 4px 8px !important;
+}
+
+/* Explore site page CSS */
+.domain-name a {
+    font-weight: 600 !important;
+    font-size: 18px;
+}
+.domain-name a:hover {
+    text-decoration: underline !important;
+}
+.domain-name small {
+    font-size: 13px;
+}
+.domain-name small:hover {
+    text-decoration: underline;
+}
+.custom_alert {
+    font-size: 12px;
+}
+
+.da-dr-field {
+    height: 45px;
+    width: 100%;
+    align-items: center;
+}
+
+.da-dr-field input {
+    margin-left: 8px;
+}
+
+.da-dr-input .separator {
+    width: 70px;
+    display: flex;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore_site_warning {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.nav-active .nav-link {
+    background: 0 0;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+.nav-active > li > a,
+.nav-tabs > li > a {
+    color: #495057;
+    font-weight: 500;
+}
+
+.nav-active .nav-link.active {
+    color: #495057;
+    border: 1px solid var(--hvr);
+}
+
+.btn-sm {
+    font-size: 0.8875rem;
+}
