@@ -37,7 +37,7 @@
   - [Many to many polyMorphic Relationship](#many-2-many-polymorphic)
 - [Query Parameter](#query-parameter)
 - [Mini Project](#project)
-- 
+
 <br/>
 <br/>
 <br/>
@@ -985,6 +985,14 @@ Make the project multi-language (using lang folder) (Bangla & English).
 
 <br/>
 <br/>
+
+
+
+- Adminpanel to manage companies
+ - Use Repository Pattern.
+ - Basic Laravel Auth: ability to log in as administrator.
+
+
 <br/>
 <br/>
 
