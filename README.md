@@ -966,7 +966,7 @@ function imageIndex(){
 <br/>
 <br/>
 
-# Mail Notification use Mailtrap<a name="mail_notification"></a>
+# Mail Notification use Mailtrap<a name="mail_notification"></a> [Link](https://github.com/mushahadur/Mail_Notification_use_Mailtrap "Mail Notification use Mailtrap")
 
 ### Step 01.
  - Sing up mailtrap
