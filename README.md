@@ -968,12 +968,15 @@ function imageIndex(){
 
 # Mail Notification use Mailtrap<a name="mail_notification"></a>
 
-## Step 01.
-### Sing up mailtrap
-### Go to inbox here
-### Go to SMTP Settings here
-### Go to Integrations here
-### select Laravel 7+
+### Step 01.
+ - Sing up mailtrap
+ - Go to inbox here
+ - Go to SMTP Settings here
+ - Go to Integrations here
+ - select Laravel 7+
+
+   <br/>
+
 <img  align="center"  src="./images/use_Mailtrap.png" width="700" title="Woners image"/>
 
 <br/>
