@@ -966,9 +966,15 @@ function imageIndex(){
 <br/>
 <br/>
 
-## Mail Notification <a name="mail_notification"></a>
+# Mail Notification use Mailtrap<a name="mail_notification"></a>
 
-<p>When I learn in daily life, then I put the main topic with an explanation. Because of I quick remind in my valuable information. So, under the same table of content.</p> 
+## Step 01.
+### Sing up mailtrap
+### Go to inbox here
+### Go to SMTP Settings here
+### Go to Integrations here
+### select Laravel 7+
+<img  align="center"  src="./images/use_Mailtrap.png" width="700" title="Woners image"/>
 
 <br/>
 # List of topic
