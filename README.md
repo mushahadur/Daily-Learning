@@ -1131,7 +1131,7 @@ php artisan make:mail Contact
 
 <br/>
 
-# Localization Language Switcher <a name="localization_language_switcher"></a> 
+# Localization Language Switcher <a name="localization_language_switcher"></a> [All source Code Link](https://github.com/mushahadur/Localization-Language-Switcher "Localization Language Switcher")
 
 <p>In this learn I will go over on how we can implement a multi-language website in Laravel using Laravel Localization and also create a simple language switcher to change the default language.</p>
 
