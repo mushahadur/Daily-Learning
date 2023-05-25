@@ -978,13 +978,37 @@ function imageIndex(){
 <img  align="center"  src="./images/use_Mailtrap.png" width="700" title="use_Mailtrap image"/>
 
 - Copy under the code
+```php
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=ee0274de4b6ef0
+MAIL_PASSWORD=52591df55f34a5
+MAIL_ENCRYPTION=tls
+```
 
   <img  align="center"  src="./images/use_Mailtrap2.png" width="700" title="use_Mailtrap2 image"/>
 
+- Replace the code from .env file by copy code
+```php
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=ee0274de4b6ef0
+MAIL_PASSWORD=52591df55f34a5
+MAIL_ENCRYPTION=tls
+```
 
+  <img  align="center"  src="./images/use_Mailtrap3.png" width="700" title="use_Mailtrap2 image"/>
 
+- And also replace the code from .env file by login your mail to mailtrap
+```php
+MAIL_FROM_ADDRESS="example@gmail.com"
+```
 
+  <img  align="center"  src="./images/use_Mailtrap4.png" width="700" title="use_Mailtrap2 image"/>
 
+<br/>
 <br/>
 
 # Mini-CRM <a name="project"></a> 
