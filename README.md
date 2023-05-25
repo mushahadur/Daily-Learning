@@ -36,6 +36,9 @@
   - [Many to Many Relation](#many-2-many)
   - [Many to many polyMorphic Relationship](#many-2-many-polymorphic)
 - [Query Parameter](#query-parameter)
+- [Mail Notification](#mail_notification)
+
+
 - [Mini Project](#project)
 
 <br/>
