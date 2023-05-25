@@ -1009,6 +1009,125 @@ MAIL_FROM_ADDRESS="example@gmail.com"
   <img  align="center"  src="./images/use_Mailtrap4.png" width="700" title="use_Mailtrap2 image"/>
 
 <br/>
+
+### Step 02.
+ - Make a blade file for upload-data/ form
+ - like
+
+```php 
+<div class="card">
+              <div class="card-header"><h3>Form Card</h3></div>
+                <form class="p-5" action="{{ route('contact.send') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="name" name="name" class="form-control" >
+                      @error('name')
+                          <span class="text-danger">{{$message}}</span>
+                      @enderror
+                  </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" name="email" class="form-control" >
+                        @error('email')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div> 
+```
+
+
+- Make a controller
+
+```bash 
+php artisan make:controller ContactController
+
+```
+
+- Route setup 
+
+```php 
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+```
+
+
+ - Make send method to ContactController
+
+```php 
+use App\Mail\Contact;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
+
+    public function send(Request $request){
+        $request->validate([
+            'name'    => 'required',
+            'email'   => 'required',
+        ]);
+
+        $data = $request;
+        Mail::to(request('email'))->send(new Contact($data));
+        return redirect()->back();
+    }
+
+``` 
+
+
+- Make a php class for mail Contact
+
+```bash 
+php artisan make:mail Contact
+
+```
+
+- Customize the mail Contact class
+
+```php  
+    public $data;
+    public function __construct($data)
+    {
+        $this->data = $data; //this data is glabal data that get autometically view email file
+    }
+    
+    public function envelope(): Envelope
+    {
+        return new Envelope(
+            subject: 'This is your mail subject',
+        );
+    }
+    
+    
+    public function content()
+    {
+        return new Content(
+            view: 'email.email',  //this is your blade file path that is send to mailtrap inbox
+        );
+        
+    }
+```
+
+- This is your email blade file that get data 
+
+```php  
+            <div class="card p-5">
+              <div class="card-header"><h4>This is your new email</h4></div>
+               <h4 class="py-3">Name is : {{ $data->name }}  </h4>
+               <h4 class="py-3">Email is : {{ $data->email }}  </h4>
+            </div> 
+```
+
+- Then you submit button you get email notification in your mailtrap
+
+  <img  align="center"  src="./images/use_Mailtrap5.png" width="700" title="use_Mailtrap2 image"/>
+  <img  align="center"  src="./images/use_Mailtrap6.png" width="700" title="use_Mailtrap2 image"/>
+
+
 <br/>
 
 # Mini-CRM <a name="project"></a> 
