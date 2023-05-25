@@ -965,6 +965,13 @@ function imageIndex(){
 
 <br/>
 <br/>
+
+## Mail Notification <a name="mail_notification"></a>
+
+<p>When I learn in daily life, then I put the main topic with an explanation. Because of I quick remind in my valuable information. So, under the same table of content.</p> 
+
+<br/>
+# List of topic
 <br/>
 
 # Mini-CRM <a name="project"></a> 
