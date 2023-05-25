@@ -37,6 +37,7 @@
   - [Many to many polyMorphic Relationship](#many-2-many-polymorphic)
 - [Query Parameter](#query-parameter)
 - [Mail Notification](#mail_notification)
+- [Localization Language Switcher](#localization_language_switcher)
 
 
 - [Mini Project](#project)
@@ -1130,6 +1131,226 @@ php artisan make:mail Contact
 
 <br/>
 
+# Localization Language Switcher <a name="localization_language_switcher"></a> 
+
+<p>In this learn I will go over on how we can implement a multi-language website in Laravel using Laravel Localization and also create a simple language switcher to change the default language.</p>
+
+### Step 01.
+
+- First of all I take the fresh Laravel Project
+```bash 
+composer create-project laravel/laravel Localization-Language-Switcher
+```
+
+### Step 02.
+
+- Make a middleware Class
+```bash 
+php artisan make:middleware Language
+```
+- Middleware class handle-method 
+```php 
+use Illuminate\Support\Facades\App;
+
+
+    public function handle($request, Closure $next)
+    {
+        if (Session()->has('applocale') AND array_key_exists(Session()->get('applocale'), config('languages'))) {
+            App::setLocale(Session()->get('applocale'));
+        }
+        else { // This is optional as Laravel will automatically set the fallback language if there is none specified
+            App::setLocale(config('app.fallback_locale'));
+        }
+        return $next($request);
+    }
+```
+
+
+### Step 03.
+
+- Add the middleware entry into the Kernel.php file
+```php 
+use App\Http\Middleware\Language;
+
+
+    protected $middlewareGroups = [
+    'web' => [
+        \App\Http\Middleware\EncryptCookies::class,
+        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        // \Illuminate\Session\Middleware\AuthenticateSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        \App\Http\Middleware\VerifyCsrfToken::class,
+        \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        \App\Http\Middleware\Language::class,                       // Add this middleware 
+    ],
+```
+
+### Step 04.
+- Create a new file named languages.php inside the config directory
+
+```php 
+<?php
+return [
+    'en' => 'English',
+    'bn' => 'বাংলা',
+    'hn' => 'हिंदी',
+];
+```
+### Step 05.
+
+- Create new controller
+```bash 
+php artisan make:controller LanguageController
+```
+
+- Setup a  LanguageController
+```php 
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
+
+
+   public function switchLang($lang)
+    {
+        if (array_key_exists($lang, Config::get('languages'))) {
+            Session::put('applocale', $lang);
+        }
+        return Redirect::back();
+    }
+```
+
+### Step 06.
+- Setup a  Route
+```php 
+use App\Http\Controllers\LanguageController;
+
+Route::get('lang/{lang}',[LanguageController::class, 'switchLang'])->name('lang.switch');
+```
+
+### Step 07.
+- Open the app.blade.php file located under resources > views > layouts and add 
+
+
+```php 
+       <div class="dropdown d-inline-block px-5">
+                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        
+                        <span class="d-none d-xl-inline-block ml-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ Config::get('languages')[App::getLocale()] }}
+                            </a>
+                        </span>
+                        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <!-- item-->
+                        @foreach (Config::get('languages') as $lang => $language)
+                        @if ($lang != App::getLocale())
+                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a>
+                        @endif
+                    @endforeach
+                    </div>
+                </div>
+```
+
+- We can show out put 
+
+  <img  align="center"  src="./images/lang.png" width="700" title="lang image"/>
+
+
+### Step 08.
+- Setup a lang folder  step by step || resources->lang->en->menu.php 
+- Setup a lang folder  step by step || resources->lang->bn->menu.php 
+- Setup a lang folder  step by step || resources->lang->hn->menu.php
+
+  <img  align="center"  src="./images/lang2.png" width="700" title="lang image"/>
+
+### Step 09.
+- menu.php inside bn directory
+```php 
+<?php
+
+return[
+    'menu' => 'তালিকা',
+    'dashboard' => 'ড্যাশবোর্ড',
+
+    'company_module' => 'কোম্পানির মডিউল',
+    'company_manage' => 'কোম্পানি পরিচালনা করুন',
+
+    'company_add' => 'নতুন কোম্পানি যোগ করুন',
+    'employee_module' => 'কর্মচারী মডিউল',
+
+    'employee_add' => 'নতুন কর্মচারী যোগ করুন',
+    'employee_manage' => 'কর্মচারী পরিচালনা করুন',
+
+
+    'search' => 'অনুসন্ধান করুন',
+    'history' => '1971 সালের মার্চ মাসে বাংলাদেশের স্বাধীনতার ঘোষণার ফলে নয় মাসব্যাপী বাংলাদেশের স্বাধীনতা যুদ্ধ শুরু হয়।',
+ ];
+```
+
+- menu.php inside en directory
+```php 
+<?php
+
+return[
+    'menu' => 'Menu',
+    'dashboard' => 'Dashboard',
+    'company_module' => 'Company Module',
+    'company_manage' => 'Manage Company',
+    'company_add' => 'Add Company',
+    'employee_module' => 'Employee Module ',
+    'employee_add' => 'Add Employee',
+    'employee_manage' => 'Manage Employee',
+    'search' => 'Search',
+    'history' => 'Proclamation of Bangladeshi Independence in March 1971 led to the nine-month long Bangladesh Liberation War.',
+ ];
+```
+
+- menu.php inside hn directory
+```php 
+<?php
+
+return[
+    'menu' => 'मेन्यू',
+    'dashboard' => 'डैशबोर्ड',
+    'company_module' => 'कंपनी मॉड्यूल',
+    'company_manage' => 'कंपनी का प्रबंधन करें',
+    'company_add' => 'कंपनी जोड़ें',
+    'employee_module' => 'कर्मचारी मॉड्यूल',
+    'employee_add' => 'कर्मचारी जोड़ें',
+    'employee_manage' => 'कर्मचारी को प्रबंधित करें',
+    'search' => 'खोज',
+    'history' => 'मार्च 1971 में बांग्लादेशी स्वतंत्रता की घोषणा ने नौ महीने लंबे बांग्लादेश मुक्ति युद्ध का नेतृत्व कियाी।',
+ ];
+```
+- Output 
+
+  <img  align="center"  src="./images/lang3.png" width="700" title="lang image"/>
+
+
+
+
+ <br/>
+<br/>
+<br/> 
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
 # Mini-CRM <a name="project"></a> 
  <br/>
 <br/>
@@ -1153,7 +1374,6 @@ php artisan make:mail Contact
  - No need to add any extra design. Only Laravel Breeze design.
  - Follow Single Responsibility Principle.
  - Follow DRY (Don't Repeat Yourself) principle.
-
 
 <br/>
 <br/>
