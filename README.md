@@ -975,11 +975,9 @@ function imageIndex(){
  - Go to Integrations here
  - select Laravel 7+
 
-   <br/>
-
 <img  align="center"  src="./images/use_Mailtrap.png" width="700" title="Woners image"/>
 
-<br/>
+
 # List of topic
 <br/>
 
