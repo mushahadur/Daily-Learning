@@ -975,11 +975,16 @@ function imageIndex(){
  - Go to Integrations here
  - select Laravel 7+
 
-<img  align="center"  src="./images/use_Mailtrap.png" width="700" title="Woners image"/>
+<img  align="center"  src="./images/use_Mailtrap.png" width="700" title="use_Mailtrap image"/>
 
 - Copy under the code
-  <img  align="center"  src="./images/use_Mailtrap2.png" width="700" title="Woners image"/>
-# List of topic
+
+  <img  align="center"  src="./images/use_Mailtrap2.png" width="700" title="use_Mailtrap2 image"/>
+
+
+
+
+
 <br/>
 
 # Mini-CRM <a name="project"></a> 
