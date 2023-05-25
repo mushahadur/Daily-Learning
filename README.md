@@ -1124,7 +1124,7 @@ php artisan make:mail Contact
 
 - Then you submit button you get email notification in your mailtrap
 
-  <img  align="center"  src="./images/use_Mailtrap5.png" width="700" title="use_Mailtrap2 image"/>
+  <img  align="center"  src="./images/use_Mailtrap5.png" width="600" title="use_Mailtrap2 image"/>
   <img  align="center"  src="./images/use_Mailtrap6.png" width="700" title="use_Mailtrap2 image"/>
 
 
