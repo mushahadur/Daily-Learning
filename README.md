@@ -38,6 +38,8 @@
 - [Query Parameter](#query-parameter)
 - [Mail Notification](#mail_notification)
 - [Localization Language Switcher](#localization_language_switcher)
+- [Learn Database](#learn_database)
+    - [Primary key VS Unique key](#primary_key_vs_unique_key)
 
 
 - [Mini Project](#project)
@@ -46,7 +48,7 @@
 <br/>
 <br/>
 
-## Introduction <a name="introduction"></a>
+# Introduction <a name="introduction"></a>
 
 <p>When I learn in daily life, then I put the main topic with an explanation. Because of I quick remind in my valuable information. So, under the same table of content.</p> 
 
@@ -1340,13 +1342,27 @@ return[
 <br/>
 <br/>
 
+# Learn Database <a name="learn_database"></a>
 
 
+## Primary key VS Unique key <a name="primary_key_vs_unique_key"></a>
+
+### Primary Key
+<p>The primary key is a unique or non-null key that uniquely identifies every record in that table or relation. The primary key column cannot store duplicate values that mean primary key column values are always unique. It is also called a minimal super key; therefore, we cannot specify more than one primary key in any relationship. A primary key column of one table can be referenced by a foreign key column of another table.</p>
 
 
+### Unique Key
+<p>The unique key is a single column or combination of columns in a table to uniquely identify database records. A unique key prevents from storing duplicate values in the column. A table can contain multiple unique key columns, unlike a primary key column. This key is similar to the primary key, except that one NULL value can be stored in the unique key column.</p>
 
-
-
+| Comparison Basis         | Primary Key                  | Unique Key                  |
+| ----------------------- | ---------------------------- |  ---------------------------- |
+| Basic | The primary key is used as a unique identifier for each record in the table. |The unique key is also a unique identifier for records when the primary key is not present in the table.|
+| NULL | We cannot store NULL values in the primary key column.|We can store NULL value in the unique key column, but only one NULL is allowed.|
+| Purpose | It enforces entity integrity.|It enforces unique data.|
+| Index | The primary key, by default, creates clustered index.|The unique key, by default, creates a non-clustered index.|
+| Number of Key |Each table supports only one primary key.|A table can have more than one unique key.|
+| Value Modification |We cannot change or delete the primary key values.|We can modify the unique key column values.|
+| Uses | It is used to identify each record in the table. | It prevents storing duplicate entries in a column except for a NULL value. |
 
 
 
