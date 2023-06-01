@@ -1377,7 +1377,7 @@ return[
 
 # SOLID Design Principles<a name="solid"></a>
 
-<img  align="center"  src="./images/l.png"  title="use_Mailtrap image"/>
+<img  align="center"  src="./images/l.png"  title="SOlID image"/>
 
 ### SOLID Design Principles in Software Development
 
