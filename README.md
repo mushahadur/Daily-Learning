@@ -1398,6 +1398,15 @@ return[
 <p>Single-responsibility Principle (SRP) states:
 A class should have one and only one reason to change, meaning that a class should have only one job.</p>
 
+<br>
+
+<p>For Example ..</p>
+
+### -Step 01: 
+
+<p>Create a new Folder "Repositories"</p>
+<img  align="center"  src="./images/solid_srp.png" width="600" title="use_Mailtrap image"/>
+
 
 ## Open-Closed Principle<a name="ocp"></a>
 
