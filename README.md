@@ -1407,6 +1407,18 @@ A class should have one and only one reason to change, meaning that a class shou
 <p>Create a new Folder "Repositories"</p>
 <img  align="center"  src="./images/solid_srp.png" width="600" title="use_Mailtrap image"/>
 
+<p>Under the Repositories folder should create Interface folder </p>
+```bash
+<!-- php artisan make:repository CompanyRepository -->
+```
+<p>And also should create Repository file </p>
+
+```bash
+php artisan make:repository CompanyRepository
+```
+
+
+<br>
 
 ## Open-Closed Principle<a name="ocp"></a>
 
