@@ -1377,6 +1377,8 @@ return[
 
 # SOLID Design Principles<a name="solid"></a>
 
+<img  align="center"  src="./images/l.png"  title="use_Mailtrap image"/>
+
 ### SOLID Design Principles in Software Development
 
 #### SOLID is a set of five design principles. These principles help software developers design robust, testable, extensible, and maintainable object-oriented software systems.
