@@ -1392,8 +1392,12 @@ return[
 - Dependency Inversion Principle
 
 
+<br>
 
 ## Single Responsibility Principle<a name="srp"></a>
+<p>Single-responsibility Principle (SRP) states:
+A class should have one and only one reason to change, meaning that a class should have only one job.</p>
+
 
 ## Open-Closed Principle<a name="ocp"></a>
 
