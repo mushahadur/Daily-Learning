@@ -41,6 +41,12 @@
 - [Learn Database](#learn_database)
     - [Primary key VS Unique key](#primary_key_vs_unique_key)
 
+- [SOLID Design Principles](#solid)
+  - [Single Responsibility Principle](#srp)
+  - [Open-Closed Principle](#ocp)
+  - [Liskov Substitution Principleh](#lsp)
+  - [Interface Segregation Principle](#isp)
+  - [Dependency Inversion Principle](#dip)
 
 - [Mini Project](#project)
 
@@ -1366,7 +1372,37 @@ return[
 
 
 
+<br/>
+<br/>
 
+# SOLID Design Principles<a name="solid"></a>
+
+### SOLID Design Principles in Software Development
+
+#### SOLID is a set of five design principles. These principles help software developers design robust, testable, extensible, and maintainable object-oriented software systems.
+
+<p>The SOLID design principles are a subcategory of many principles introduced by the American computer scientist and instructor, Robert C. Martin (A.K.A Uncle Bob) in a 2000 paper.</p> 
+
+- Single Responsibility Principle
+- Open-Closed Principle
+- Liskov Substitution Principle
+- Interface Segregation Principle
+- Dependency Inversion Principle
+
+
+
+## Single Responsibility Principle<a name="srp"></a>
+
+## Open-Closed Principle<a name="ocp"></a>
+
+## Liskov Substitution Principle<a name="lsp"></a>
+
+## Interface Segregation Principle<a name="isp"></a>
+## Dependency Inversion Principle<a name="dip"></a>
+
+
+<br/>
+<br/>
 # Mini-CRM <a name="project"></a> 
  <br/>
 <br/>
