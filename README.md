@@ -47,6 +47,10 @@
   - [Liskov Substitution Principleh](#lsp)
   - [Interface Segregation Principle](#isp)
   - [Dependency Inversion Principle](#dip)
+- [Use Request Class](#request_class)
+
+
+
 
 - [Mini Project](#project)
 
@@ -1525,6 +1529,160 @@ use App\Repositories\CompanyRepository;
 ## Dependency Inversion Principle<a name="dip"></a>
 
 
+<br/>
+
+# Use Request Class <a name="request_class"></a>
+
+### Laravel Form Validation Request Class Example
+
+### -Step 01: 
+
+#### Create Routes
+
+```bash
+Route::post('product-store', [ProductController::class, 'store'])->name('products.store');
+```
+
+### -Step 02:
+
+####  Create Request Class
+
+```bash
+php artisan make:request RequestStoreProduct
+```
+<p>now, we will update rules as bellow:</p>
+<p>app/Http/Requests/RequestStoreProduct.php</p>
+
+```php
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Http\FormRequest;
+
+class RequestStoreProduct extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return Auth::check();
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
+     */
+    public function rules(): array
+    {
+        return [
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'category' => 'required'
+        ];
+
+    }
+}
+```
+
+ <br/>
+
+ 
+### -Step 03:
+
+####  Create Controller
+
+```bash
+php artisan make:controller ProductController
+```
+
+<p>for post request with validation, we will use StoreUser class for validation, i write validation for that, so simply add both following method on it.
+
+app/Http/Controllers/ProductController.php</p>
+
+
+```php 
+<?php
+    
+namespace App\Http\Controllers;
+    
+use Illuminate\Http\Request;
+use App\User;
+use App\Http\Requests\RequestStoreProduct;
+    
+class ProductController extends Controller
+{
+   
+
+    public function store(RequestStoreProduct $request)
+    {
+        $input = $request->all();
+        $product = Product::create($input);
+      
+        return back()->with('success', 'Product created successfully.');
+    }
+}
+
+```
+
+<br/>
+
+### -Step 04:
+
+####  Create blade file for form
+
+```php
+<form method="POST" action="{{ url('user/create') }}">
+  
+            @csrf
+  
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" class="form-control" placeholder="Name">
+                @error('name')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+   
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="text" name="price" class="form-control" placeholder="price">
+                @error('price')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+    
+            <div class="form-group">
+                <strong>Category:</strong>
+                <input type="text" name="category" class="form-control" placeholder="Category">
+                @error('category')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+   
+            <div class="form-group">
+                <button class="btn btn-success btn-submit">Submit</button>
+            </div>
+        </form>
+```
+
+<p>Now we can run and check full example.</p>
+
+
+
+<br/> <br/>
+<br/>
+<br/> <br/>
+<br/>
+<br/> <br/>
+<br/>
+<br/> <br/>
+<br/>
+<br/> <br/>
+<br/>
 <br/>
 <br/>
 # Mini-CRM <a name="project"></a> 
