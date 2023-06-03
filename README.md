@@ -1408,16 +1408,113 @@ A class should have one and only one reason to change, meaning that a class shou
 <img  align="center"  src="./images/solid_srp.png" width="600" title="use_Mailtrap image"/>
 
 <p>Under the Repositories folder should create Interface folder </p>
-```bash
-<!-- php artisan make:repository CompanyRepository -->
+<p>Under the Interface folder should create Interface file </p>
+<p>For Example CompanyRepositoryInterface </p>
+
+
+```php
+<?php
+
+namespace App\Repositories\Interfaces;
+
+interface CompanyRepositoryInterface
+{
+  public function All();
+}
+
 ```
+
 <p>And also should create Repository file </p>
 
 ```bash
 php artisan make:repository CompanyRepository
 ```
+<p>For Example CompanyRepository </p>
+
+```php
+<?php
+
+namespace App\Repositories;
+
+use App\Models\Company;
+use App\Repositories\Interfaces\CompanyRepositoryInterface;
+
+class CompanyRepository implements CompanyRepositoryInterface {
+    public function All(){
+        return Company::all();
+    }
+}
+
+```
 
 
+<br>
+
+### -Step 02: 
+
+#### Then create a controller 
+```bash
+php artisan make:controller CompanyController
+```
+<p> In this contoller create a __construct method</p>
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Company;
+use Illuminate\Http\Request;
+use App\Http\Requests\CompanyRequest;
+use Illuminate\Support\Facades\Redirect;
+use App\Repositories\Interfaces\CompanyRepositoryInterface;
+
+
+class CompanyController extends Controller
+{
+    protected $companyRepository;
+   public function __construct(CompanyRepositoryInterface $companyRepository)
+   {
+        $this->companyRepository = $companyRepository;
+   }
+    public function index()
+    {
+        $company = $this->companyRepository->All();
+        return view('admin.company.index')->with( 'companies', $company);
+    }
+}
+
+```
+
+<br>
+
+### -Step 03: 
+
+<p>Go to Providers/AppServiceProvider then add </p>
+
+```php
+<?php
+
+use App\Repositories\Interfaces\CompanyRepositoryInterface;
+use App\Repositories\CompanyRepository;
+
+
+    public function boot(): void
+    {
+        $this->app->bind(CompanyRepositoryInterface::class , CompanyRepository::class);
+        $this->app->bind(EmployeeRepositoryInterface::class , EmployeeRepository::class);
+    
+    }
+
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Open-Closed Principle<a name="ocp"></a>
