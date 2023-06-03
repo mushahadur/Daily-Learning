@@ -48,6 +48,7 @@
   - [Interface Segregation Principle](#isp)
   - [Dependency Inversion Principle](#dip)
 - [Use Request Class](#request_class)
+- [Redirect to login from register](#redirect_to_login)
 
 
 
@@ -1406,7 +1407,7 @@ A class should have one and only one reason to change, meaning that a class shou
 
 <p>For Example ..</p>
 
-### -Step 01: 
+### - Step 01: 
 
 <p>Create a new Folder "Repositories"</p>
 <img  align="center"  src="./images/solid_srp.png" width="600" title="use_Mailtrap image"/>
@@ -1454,7 +1455,7 @@ class CompanyRepository implements CompanyRepositoryInterface {
 
 <br>
 
-### -Step 02: 
+### - Step 02: 
 
 #### Then create a controller 
 ```bash
@@ -1492,7 +1493,7 @@ class CompanyController extends Controller
 
 <br>
 
-### -Step 03: 
+### - Step 03: 
 
 <p>Go to Providers/AppServiceProvider then add </p>
 
@@ -1535,7 +1536,7 @@ use App\Repositories\CompanyRepository;
 
 ### Laravel Form Validation Request Class Example
 
-### -Step 01: 
+### - Step 01: 
 
 #### Create Routes
 
@@ -1543,7 +1544,7 @@ use App\Repositories\CompanyRepository;
 Route::post('product-store', [ProductController::class, 'store'])->name('products.store');
 ```
 
-### -Step 02:
+### - Step 02:
 
 ####  Create Request Class
 
@@ -1591,7 +1592,7 @@ class RequestStoreProduct extends FormRequest
  <br/>
 
  
-### -Step 03:
+### - Step 03:
 
 ####  Create Controller
 
@@ -1630,7 +1631,7 @@ class ProductController extends Controller
 
 <br/>
 
-### -Step 04:
+### - Step 04:
 
 ####  Create blade file for form
 
@@ -1674,6 +1675,25 @@ class ProductController extends Controller
 
 
 <br/> <br/>
+
+# Redirect to login from register <a name="redirect_to_login"></a>
+
+<p>Go there routes/auth.php </p>
+
+<p>Then modify register route </p>
+
+```php 
+Route::middleware('guest')->group(function () {
+    
+    Route::redirect('/register', '/login');
+/*   Route::get('register', [RegisteredUserController::class, 'create'])
+                ->name('register'); */
+            
+    
+}
+```
+
+
 <br/>
 <br/> <br/>
 <br/>
