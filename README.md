@@ -49,7 +49,7 @@
   - [Dependency Inversion Principle](#dip)
 - [Use Request Class](#request_class)
 - [Redirect to login from register](#redirect_to_login)
-
+- [Create & Update Form need to refactor(DRY)](#refactor)
 
 
 
@@ -1696,6 +1696,139 @@ Route::middleware('guest')->group(function () {
 
 <br/>
 <br/> <br/>
+
+# Create & Update Form need to refactor(DRY) <a name="refactor"></a>
+
+<p>For our remember informetion  we have create form and edit form , first of all</p>
+
+### create.blade.php
+
+```php
+@extends('admin.layouts.app')
+
+@section('body')
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{ __('company.company_add') }}</h4>
+                    <p class="card-title-desc">{{Session::get('message')}}</p>
+                    @include('admin.company._form')
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+@endsection
+
+```
+
+
+### edit.blade.php
+
+```php
+@extends('admin.layouts.app')
+
+@section('body')
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{ __('company.update_employee') }}</h4>
+                    <p class="card-title-desc">{{Session::get('message')}}</p>
+                    <form action="{{ route('company.update', $empcompanyloyee) }}" method="Post" enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
+
+                        @include('admin.company._form')  
+                    </form>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+@endsection
+
+
+```
+
+
+
+### _form.blade.php
+
+```php
+    @if (isset($company))
+        <form action="{{ route('companies.update', $company) }}" method="Post" enctype="multipart/form-data"  id="my-form">
+            @csrf
+            @method('PUT')
+    @else
+        <form   action="{{ route('companies.store') }}" method="Post" enctype="multipart/form-data">
+            @csrf
+    @endif
+
+        <div class="form-group row">
+            <label class="col-form-label col-md-4">{{ __('company.company_name') }}</label>
+            <div class="col-md-8">
+                <input type="text" name="name" value="{{isset($company)? $company->name : ""}}" class="form-control"/>
+                @error('name')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-4">{{ __('company.company_email') }}</label>
+            <div class="col-md-8">
+                <input type="email" name="email" value="{{isset($company)? $company->email : "" }}" class="form-control"/>
+                @error('email')
+                <span class="text-danger">{{$message}}</span>
+            @enderror
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-4">{{ __('company.company_website') }}</label>
+            <div class="col-md-8">
+                <input type="text" name="website" value="{{isset($company)? $company->website : "" }}" class="form-control"/>
+                @error('website')
+                <span class="text-danger">{{$message}}</span>
+            @enderror
+            </div>
+        </div>
+        
+
+        
+
+   @if (isset($company))
+        <div class="form-group row">
+            <label class="col-form-label col-md-4">{{ __('company.company_logo') }}</label>
+                <div class="col-md-8">
+                    <input type="file" class="form-control-file" id="horizontal-password-input4" name="logo"/>
+                    <img class="pt-3" src="{{asset('storage/Company-logos/'.$company->logo)}}" alt="" height="150" width="200"/>
+                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-success">{{ __('company.update_company') }}</button>
+            </div>
+        </div>
+    @else
+        <div class="form-group row">
+            <label class="col-form-label col-md-4">{{ __('company.company_logo') }}</label>
+            <div class="col-md-8">
+                <input type="file" name="logo" class="form-control-file" />
+                @error('logo')
+                <span class="text-danger">{{$message}}</span>
+            @enderror
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" id="saveCompany" class="btn btn-primary">{{ __('company.save') }}</button>
+          </div>
+        </div>
+    @endif
+
+</form>
+
+```
+
 <br/>
 <br/> <br/>
 <br/>
