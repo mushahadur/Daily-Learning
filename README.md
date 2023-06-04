@@ -53,7 +53,7 @@
 - [Accessor & Mutator](#acc_mut)
     - [Accessor](#accessor)
     - [Mutator](#mutator)
-
+- [Search and Build a filter (Popup)](#filtering)
 
 - [Mini Project](#project)
 
@@ -1907,8 +1907,146 @@ protected $fillable = ['first_name','last_name', 'email','phone','districts', 'd
 
 <img src="./images/accessor_2.png" title="Mutetor image"/>
 
-<br/>
+
+<br/><br/>
 <br/> <br/>
+<br/> <br/>
+
+
+# Search and Build a filter (Popup) <a name="filtering"></a>
+
+#### Build a filter (Popup) where you can filter employees by company, division, district and their email extension(ex: gmail, yahoo, outlook).
+
+### -Step 01.
+
+<p>First of all create a blade file popup modal. In this modal body we should create form for filter, from action is employees.index and from method is GET</p>
+
+```php
+ <div class="modal-body">
+                            <form action="{{ route('employees.index') }}" method="GET">
+                                <div class="form-group row mb-4">
+                                    <div class="col-sm-6">
+                                        <select class="form-select form-control text-success" name="company_id" />
+                                            <option  value="" >Select Company Name</option>
+                                            @foreach($companies as $company)
+                                                <option  value="{{$company->id}}"> {{$company->name}} </option>
+                                            @endforeach
+                                        </select>       
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select name="mail" class="text-success form-control form-select form-select-lg mb-3" >
+                                            <option value="" >Select Mail Name</option>
+                                            <option value="gmail">Gmail</option>
+                                            <option value="outlook">Outlook</option>
+                                            <option value="yahoo">Yahoo</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <div class="col-sm-6">
+                                        <select class="form-select form-control text-success" name="divisions" />
+                                            <option  value="" >Select Employee Division</option>
+                                            @foreach($employees as $employee)
+                                                <option  value="{{$employee->divisions}}"> {{$employee->divisions}} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="form-select form-control text-success" name="districts" />
+                                            <option  value="" >Select Employee Districts</option>
+                                            @foreach($employees as $employee)
+                                                <option  value="{{$employee->districts}}"> {{$employee->districts}} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Search Now</button>
+                                </div>
+                              </form>
+                        </div>
+```
+
+### -Step 02.
+
+<p>When belongs to Company model , for example </p>
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Employee extends Model
+{
+    use HasFactory;
+    protected $fillable = ['first_name','last_name', 'email','phone','districts', 'divisions','company_id'];
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
+}
+```
+<p>First of all we can catch Company model by with() function . for example </p>
+
+```php
+
+   $employees = Employee::with('company'); 
+
+```
+
+<p>Every condition check and get conditional data  </p>
+
+```php
+public function index(Request $request)
+    {
+        
+      $employees = Employee::with('company');   // This is the main data variable 
+
+        if (!is_null($request->query('company_id'))) {
+        $employees->where('company_id', $request->query('company_id'));
+        }
+        if (!is_null($request->query('mail'))) {
+            $employees->where('email', 'like', '%@'. $request->query('mail').'.com');
+        }
+        if (!is_null($request->query('divisions'))) {
+            $employees->where('divisions', $request->query('divisions'));
+        }
+        if (!is_null($request->query('districts'))) {
+            $employees->where('districts', $request->query('districts'));
+        }
+
+        $employees = $employees->get();
+        $companies = $this->employeeRepositories->CompanyAllData();
+
+
+    return view('admin.employee.index', compact('companies','employees'));
+    }
+
+```
+
+
+<br/>
+
+### Data filtering Query  Structure 
+
+<img src="./images/filtering.png" title="Mutetor image"/>
+
+
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/>
+
+
 <br/>
 <br/> <br/>
 <br/>
