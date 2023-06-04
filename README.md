@@ -1923,49 +1923,49 @@ protected $fillable = ['first_name','last_name', 'email','phone','districts', 'd
 
 ```php
  <div class="modal-body">
-                            <form action="{{ route('employees.index') }}" method="GET">
-                                <div class="form-group row mb-4">
-                                    <div class="col-sm-6">
-                                        <select class="form-select form-control text-success" name="company_id" />
-                                            <option  value="" >Select Company Name</option>
-                                            @foreach($companies as $company)
-                                                <option  value="{{$company->id}}"> {{$company->name}} </option>
-                                            @endforeach
-                                        </select>       
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <select name="mail" class="text-success form-control form-select form-select-lg mb-3" >
-                                            <option value="" >Select Mail Name</option>
-                                            <option value="gmail">Gmail</option>
-                                            <option value="outlook">Outlook</option>
-                                            <option value="yahoo">Yahoo</option>
-                                          </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row mb-4">
-                                    <div class="col-sm-6">
-                                        <select class="form-select form-control text-success" name="divisions" />
-                                            <option  value="" >Select Employee Division</option>
-                                            @foreach($employees as $employee)
-                                                <option  value="{{$employee->divisions}}"> {{$employee->divisions}} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <select class="form-select form-control text-success" name="districts" />
-                                            <option  value="" >Select Employee Districts</option>
-                                            @foreach($employees as $employee)
-                                                <option  value="{{$employee->districts}}"> {{$employee->districts}} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Search Now</button>
-                                </div>
-                              </form>
-                        </div>
+    <form action="{{ route('employees.index') }}" method="GET">
+        <div class="form-group row mb-4">
+            <div class="col-sm-6">
+                <select class="form-select form-control text-success" name="company_id" />
+                    <option  value="" >Select Company Name</option>
+                    @foreach($companies as $company)
+                        <option  value="{{$company->id}}"> {{$company->name}} </option>
+                    @endforeach
+                </select>       
+            </div>
+            <div class="col-sm-6">
+                <select name="mail" class="text-success form-control form-select form-select-lg mb-3" >
+                    <option value="" >Select Mail Name</option>
+                    <option value="gmail">Gmail</option>
+                    <option value="outlook">Outlook</option>
+                    <option value="yahoo">Yahoo</option>
+                  </select>
+            </div>
+        </div>
+        <div class="form-group row mb-4">
+            <div class="col-sm-6">
+                <select class="form-select form-control text-success" name="divisions" />
+                    <option  value="" >Select Employee Division</option>
+                    @foreach($employees as $employee)
+                        <option  value="{{$employee->divisions}}"> {{$employee->divisions}} </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <select class="form-select form-control text-success" name="districts" />
+                    <option  value="" >Select Employee Districts</option>
+                    @foreach($employees as $employee)
+                        <option  value="{{$employee->districts}}"> {{$employee->districts}} </option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Search Now</button>
+        </div>
+      </form>
+ </div>
 ```
 
 ### -Step 02.
@@ -2033,7 +2033,7 @@ public function index(Request $request)
 
 ### Data filtering Query  Structure 
 
-<img src="./images/filtering.png" title="Mutetor image"/>
+<img src="./images/data_filtering_1.png" title="Mutetor image"/>
 
 
 <br/> <br/><br/>
