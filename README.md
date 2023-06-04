@@ -1864,6 +1864,14 @@ class Employee extends Model
 ```
 <p>So what’s happening here is, we have created a function which will get called every time full_name is called on the user( Model ). There is a pattern, if you see closely, in every attribute function you make. The get[attribute_name]Attribute(), is the way you can create an accessor.</p>
 
+
+<p>Now we can show full name in my blade file  </p>
+
+```php
+ <h4>Employee Full Name: {{$employee->first_name_last_name}}  </h4>
+ <hr> 
+```
+
 # Mutator  <a name="mutator"></a>
 
 <p>A mutator transforms an Eloquent attribute value when it is set. Mutators work when we save data inside database table.</p>
@@ -1881,15 +1889,23 @@ protected $fillable = ['first_name','last_name', 'email','phone','districts', 'd
 
 
 
-    public function getFirstNameLastNameAttribute()
+    public function setFirstNameAttribute($value)   //Mutator
     {
-        return $this->first_name."     ".$this->last_name;
+        $this->attributes['first_name'] = ucfirst($value);
+    }
+    public function setLastNameAttribute($value)    //Mutator
+    {
+        $this->attributes['last_name'] = ucfirst($value);
     }
 }
 ```
+### Input Form 
 
+<img  src="./images/accessor_1.png" title="Mutetor image"/>
 
+### Output data table 
 
+<img src="./images/accessor_2.png" title="Mutetor image"/>
 
 <br/>
 <br/> <br/>
