@@ -50,7 +50,9 @@
 - [Use Request Class](#request_class)
 - [Redirect to login from register](#redirect_to_login)
 - [Create & Update Form need to refactor(DRY)](#refactor)
-
+- [Accessor & Mutator](#acc_mut)
+    - [Accessor](#accessor)
+    - [Mutator](#mutator)
 
 
 - [Mini Project](#project)
@@ -1831,6 +1833,64 @@ Route::middleware('guest')->group(function () {
 
 <br/>
 <br/> <br/>
+
+# Accessor & Mutator <a name="acc_mut"></a>
+
+#### Laravel Accessors and Mutators are custom, user defined methods. Accessors are used to format the attributes when you retrieve them from database. Whereas, Mutators are used to format the attributes before saving them into the database.Accessors are used to format the attributes when you retrieve them from database.Whereas, Mutators are used to format the attributes before saving them into the database.
+
+
+# Accessor  <a name="accessor"></a>
+
+<p>In this example, we’ll define an accessor for the first_name attribute. The accessor will automatically be called by Eloquent when attempting to retrieve the value of the first_name attribute:</p>
+
+```php
+<?php
+
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+
+class Employee extends Model
+{
+    use HasFactory;
+    protected $fillable = ['first_name','last_name', 'email','phone','districts', 'divisions','company_id'];
+
+
+
+    public function getFirstNameLastNameAttribute()
+    {
+        return $this->first_name."     ".$this->last_name;
+    }
+
+```
+<p>So what’s happening here is, we have created a function which will get called every time full_name is called on the user( Model ). There is a pattern, if you see closely, in every attribute function you make. The get[attribute_name]Attribute(), is the way you can create an accessor.</p>
+
+# Mutator  <a name="mutator"></a>
+
+<p>A mutator transforms an Eloquent attribute value when it is set. Mutators work when we save data inside database table.</p>
+
+```php
+<?php
+
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+
+class Employee extends Model
+{
+use HasFactory;
+protected $fillable = ['first_name','last_name', 'email','phone','districts', 'divisions','company_id'];
+
+
+
+    public function getFirstNameLastNameAttribute()
+    {
+        return $this->first_name."     ".$this->last_name;
+    }
+}
+```
+
+
+
+
 <br/>
 <br/> <br/>
 <br/>
