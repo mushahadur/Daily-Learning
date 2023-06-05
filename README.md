@@ -54,6 +54,7 @@
     - [Accessor](#accessor)
     - [Mutator](#mutator)
 - [Search and Build a filter (Popup)](#filtering)
+- [CSRF](#csrf)
 
 - [Mini Project](#project)
 
@@ -2037,6 +2038,19 @@ public function index(Request $request)
 
 
 <br/> <br/><br/>
+
+
+# CSRF <a name="csrf"></a>
+
+</hr>
+#### What is Cross-Site Request Forgery (CSRF)?
+
+<p>A cross site request forgery attack is a type of confused deputy* cyber attack that tricks a user into accidentally using their credentials to invoke a state changing activity, such as transferring funds from their account, changing their email address and password, or some other undesired action.
+
+While the potential impact against a regular user is substantial, a successful CSRF attack against an administrative account can compromise an entire server, potentially resulting in complete takeover of a web application, API, or other service.
+
+How does Cross-Site Request </p>
+
 <br/> <br/><br/>
 <br/> <br/><br/>
 <br/> <br/><br/>
