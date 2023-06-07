@@ -2159,6 +2159,8 @@ class VerifyCsrfToken extends Middleware
 }
 ```
 
+ <br/>
+
 ## X-CSRF-TOKEN
 
 <p>AJAX রিকোয়েস্টের জন্য CSRF Token কে যখন HTTP header যোগ করা হয়। তখন উক্ত CSRF Token কে X-CSRF-TOKEN বলা হয়।</p>
@@ -2177,6 +2179,30 @@ $.ajaxSetup({
     }
 });
 ```
+
+
+ <br/>
+
+## X-CSRF-TOKEN
+
+<p>AJAX রিকোয়েস্টের জন্য CSRF Token কে যখন HTTP header যোগ করা হয়। তখন উক্ত CSRF Token কে X-CSRF-TOKEN বলা হয়।</p>
+<p>AJAX রিকোয়েস্ট এ CSRF token কে একটি POST প্যারামিটার হিসাবে পরীক্ষা করার পাশাপাশি App\Http\Middleware\VerifyCsrfToken মিডলওয়্যার টি X-CSRF-TOKEN request header টিও যেন পরীক্ষা করতে পারে , সে জন্য আমাদেরকে আপনি, CSRF কে HTML মেটা ট্যাগে টোকেন সংরক্ষণ করতে হবে:</p>
+
+```php
+<meta name="csrf-token" content="{{ csrf_token() }}">
+```
+<p>AJAX রিকোয়েস্টের জন্য CSRF Token কে যখন HTTP header যোগ করা হয়। তখন উক্ত CSRF Token কে X-CSRF-TOKEN বলা হয়।</p>
+<p>তারপর, আপনি jQuery-এর মতো একটি লাইব্রেরিকে নির্দেশ দিতে পারেন যাতে স্বয়ংক্রিয়ভাবে সমস্ত request header গুলোতে টোকেন যোগ করা যায়। এটি legacy JavaScript প্রযুক্তি ব্যবহার করে আপনার AJAX ভিত্তিক অ্যাপ্লিকেশনগুলির জন্য সহজ, সুবিধাজনক Laravel CSRF সুরক্ষা প্রদান করে:</p>
+
+```php
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+```
+
+
 
 <p></p>
 <p></p>
