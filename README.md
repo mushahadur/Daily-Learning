@@ -2289,8 +2289,6 @@ $.ajaxSetup({
  - No need to add any extra design. Only Laravel Breeze design.
  - Follow Single Responsibility Principle.
  - Follow DRY (Don't Repeat Yourself) principle.
-  - Follow Single Responsibility Principle.
- - Follow DRY (Don't Repeat Yourself) principle.
 
 <br/>
 <br/>
