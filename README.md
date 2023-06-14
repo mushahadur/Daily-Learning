@@ -55,6 +55,7 @@
     - [Mutator](#mutator)
 - [Search and Build a filter (Popup)](#filtering)
 - [CSRF](#csrf)
+- [Nomalizeton](#nomalizeton)
 
 - [Mini Project](#project)
 
@@ -2224,7 +2225,12 @@ $.ajaxSetup({
 
 
 
+# Normalizetion <a name="normalizetion"></a>
 
+- Normalization is the process of organizing the data in the database.
+- Normalization is used to minimize the redundancy from a relation or set of relations. It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies.
+- Normalization divides the larger table into smaller and links them using relationships.
+- The normal form is used to reduce redundancy from the database table.
 
 
  <br/><br/>
