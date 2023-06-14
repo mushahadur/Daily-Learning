@@ -55,7 +55,7 @@
     - [Mutator](#mutator)
 - [Search and Build a filter (Popup)](#filtering)
 - [CSRF](#csrf)
-- [Nomalizeton](#nomalizeton)
+- [Nomalizeton](#normalizetion)
 
 - [Mini Project](#project)
 
