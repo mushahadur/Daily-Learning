@@ -56,6 +56,7 @@
 - [Search and Build a filter (Popup)](#filtering)
 - [CSRF](#csrf)
 - [Nomalizeton](#normalizetion)
+- [Indexing](#indexing)
 
 - [Mini Project](#project)
 
@@ -2234,6 +2235,13 @@ $.ajaxSetup({
 
 
  <br/><br/>
+
+# Indexing <a name="indexing"></a>
+
+<p></p>
+
+
+
 <br/> <br/><br/>
 <br/> <br/><br/>
 <br/> <br/><br/>
