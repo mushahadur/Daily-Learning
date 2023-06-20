@@ -56,7 +56,7 @@
 - [Search and Build a filter (Popup)](#filtering)
 - [CSRF](#csrf)
 - [Nomalizeton](#normalizetion)
-- [Indexing](#indexing)
+- [Indexing in DBMS](#indexing)
 
 - [Mini Project](#project)
 
@@ -2236,8 +2236,11 @@ $.ajaxSetup({
 
  <br/><br/>
 
-# Indexing <a name="indexing"></a>
+# Indexing in DBMS<a name="indexing"></a>
+- Indexing is used to optimize the performance of a database by minimizing the number of disk accesses required when a query is processed.
+- The index is a type of data structure. It is used to locate and access the data in a database table quickly.
 
+   <br/><br/>
 <p></p>
 
 
