@@ -58,6 +58,8 @@
 - [Nomalizeton](#normalizetion)
 - [Indexing in DBMS](#indexing)
   - [Index structure](#index_structure)
+  - [Indexing Methods](#index_methods)
+  
 
 - [Mini Project](#project)
 
@@ -2242,8 +2244,6 @@ $.ajaxSetup({
 - Indexing is used to optimize the performance of a database by minimizing the number of disk accesses required when a query is processed.
 - The index is a type of data structure. It is used to locate and access the data in a database table quickly.
 
-   <br/><br/>
-
 
 ## Index Structure  <a name="index_structure"></a>
 
@@ -2253,6 +2253,15 @@ $.ajaxSetup({
 
 - The first column of the database is the search key that contains a copy of the primary key or candidate key of the table. The values of the primary key are stored in sorted order so that the corresponding data can be accessed easily.
 - The second column of the database is the data reference. It contains a set of pointers holding the address of the disk block where the value of the particular key can be found.
+
+## Indexing Methods <a name="index_methods"></a>
+
+<p>Indexes can be created using some database columns.</p>
+
+<img src="./images/dbms_types.png"  title="index image"/>
+
+
+
 
 <br/> <br/><br/>
 <br/> <br/><br/>
