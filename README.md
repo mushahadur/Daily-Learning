@@ -57,6 +57,7 @@
 - [CSRF](#csrf)
 - [Nomalizeton](#normalizetion)
 - [Indexing in DBMS](#indexing)
+  - [Index structure](#index_structure)
 
 - [Mini Project](#project)
 
@@ -2241,9 +2242,15 @@ $.ajaxSetup({
 - The index is a type of data structure. It is used to locate and access the data in a database table quickly.
 
    <br/><br/>
-<p></p>
 
 
+# Index Structure  <a name="index_structure"></a>
+
+<p>Indexes can be created using some database columns.</p>
+  <img src="./images/indexing-in-dbms.png"  title="index image"/>
+
+- The first column of the database is the search key that contains a copy of the primary key or candidate key of the table. The values of the primary key are stored in sorted order so that the corresponding data can be accessed easily.
+- The second column of the database is the data reference. It contains a set of pointers holding the address of the disk block where the value of the particular key can be found.
 
 <br/> <br/><br/>
 <br/> <br/><br/>
