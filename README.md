@@ -1584,7 +1584,7 @@ Route::post('product-store', [ProductController::class, 'store'])->name('product
 php artisan make:request RequestStoreProduct
 ```
 <p>now, we will update rules as bellow:</p>
-<p>app/Http/Requests/RequestStoreProduct.php</p>
+<p>app/Http/Requests/RequestStoreProduct.php then custom  return false  /// When create a new Request then autometicaly return false. return true  /// You can custom return true then authorize true. return Auth::check();   /// You can custom return Auth::check() function and also must include this class then authorize true.</p>
 
 ```php
 <?php
