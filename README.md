@@ -1522,6 +1522,39 @@ use App\Repositories\CompanyRepository;
 ```
 
 <br>
+
+### - Step 03: 
+
+<p>When create a new ServiceProvider then  go to 'config/app.php' for that add class this ServiceProvider </p>
+
+```php
+<?php
+
+use App\Providers\RepositoryServiceProvider;
+
+
+    'providers' => ServiceProvider::defaultProviders()->merge([
+        /*
+         * Package Service Providers...
+         */
+        ................
+        .
+        .
+        /*
+         * Custom Service Providers...
+         */
+        RepositoryServiceProvider::class,
+        
+    ])->toArray(),
+
+```
+
+<br>
+
+
+
+
+
 <br>
 <br>
 <br>
