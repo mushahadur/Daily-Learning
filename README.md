@@ -1541,9 +1541,9 @@ use App\Providers\RepositoryServiceProvider;
         .
         .
         /*
-         * Custom Service Providers...
+         * Add a New Custom Service Providers...
          */
-        RepositoryServiceProvider::class,
+        NewCustomServiceProvider::class,
         
     ])->toArray(),
 
@@ -1551,15 +1551,6 @@ use App\Providers\RepositoryServiceProvider;
 
 <br>
 
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 
