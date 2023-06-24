@@ -1601,7 +1601,15 @@ class RequestStoreProduct extends FormRequest
      */
     public function authorize(): bool
     {
-        return Auth::check();
+        /**
+        return false  /// When create a new Request then autometicaly return false.
+       */
+
+        /**
+        return true  /// You can custom return true then authorize true.
+       */
+
+        return Auth::check();   /// You can custom return Auth::check() function and also must include this class then authorize true.
     }
 
     /**
