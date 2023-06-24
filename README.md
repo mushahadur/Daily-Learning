@@ -1523,7 +1523,7 @@ use App\Repositories\CompanyRepository;
 
 <br>
 
-### - Step 03: 
+### - Step 04: 
 
 <p>When create a new ServiceProvider then  go to 'config/app.php' for that add class this ServiceProvider </p>
 
