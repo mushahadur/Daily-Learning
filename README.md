@@ -2273,6 +2273,9 @@ $.ajaxSetup({
 
 # Indexing in DBMS<a name="indexing"></a>
 
+### What is Indexing?
+<p>Indexing is a way to optimize the performance of a database by minimizing the number of disk accesses required and steps when a query is processed. It is a data structure technique that is used to quickly locate and access the data in a database.</p>
+
 - Indexing is used to optimize the performance of a database by minimizing the number of disk accesses required when a query is processed.
 - The index is a type of data structure. It is used to locate and access the data in a database table quickly.
 
