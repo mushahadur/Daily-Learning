@@ -2356,6 +2356,12 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 - The first column of the database is the search key that contains a copy of the primary key or candidate key of the table. The values of the primary key are stored in sorted order so that the corresponding data can be accessed easily.
 - The second column of the database is the data reference. It contains a set of pointers holding the address of the disk block where the value of the particular key can be found.
 
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+<br/> <br/><br/>
+
+
 ## Indexing Methods <a name="index_methods"></a>
 
 <p>Indexes can be created using some database columns.</p>
