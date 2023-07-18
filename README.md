@@ -2338,19 +2338,6 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 
 
 
-
-
-
- <br/><br/>
-  <br/><br/>
-   <br/><br/>
-    <br/><br/>
-
-
-
-
-
-
 # Indexing in DBMS<a name="indexing"></a>
 
 ### What is Indexing?
