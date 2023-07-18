@@ -358,7 +358,7 @@ php artisan migrate
 ```
 
 ## Output :
-<img  align="center"  src="images/address.png" width="600" title="Add a Address Column "/>
+<img src="images/address.png" width="600" title="Add a Address Column "/>
 <br/>
 <br/>
 
@@ -2266,7 +2266,7 @@ $.ajaxSetup({
 
 
 
-# Normalizetion <a name="normalizetion"></a>
+# Normalizetion <a name="normalizetion"></a> [Normalizetion](https://msblab.com/database/database-normalization-in-bangla/ "Normalizetion Link") 
 
 ডাটাবেজ নরমালাইজেশন (normalization) কী জিনিস? এক কথায় আসলে উত্তর দেওয়া সম্ভব নয়। তাই বরং আসুন, আমরা বিষয়টি নিয়ে একটু বিস্তারিত আলচনা করি। কোনো কিছুকে নরমালাইজ (normalize) করার অর্থ হচ্ছে সেটিকে স্বাভাবিক (normal) অবস্থায় নিয়ে আসা। তো ডাটাবেজের ক্ষেত্রে এই নরমালাইজেশনের অর্থ হচ্ছে ডাটাবেজকে এমন অবস্থায় নিয়ে আসা যেন ডাটা রিডানডেন্সি (data redundancy) না থাকে এবং ডাটা ইন্টিগ্রিটি (data integrity) বজায় থাকে। এই যে এখন আবার নতুন দুটো জিনিস চলে এল, ডাটা রিডানডেন্সি ও ডাটা ইন্টিগ্রিটি। এগুলো আবার কী জিনিস?
 
