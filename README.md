@@ -2375,16 +2375,10 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 <br/> <br/><br/>
 <br/> <br/><br/>
 <br/> <br/><br/>
-<br/> <br/><br/>
-<br/> <br/><br/>
 <br/> <br/>
 
 
 
-<br/>
-<br/> <br/>
-<br/>
-<br/>
 <br/>
 # Mini-CRM <a name="project"></a> 
  <br/>
