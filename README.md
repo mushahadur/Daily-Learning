@@ -67,7 +67,6 @@
   
 - [Course Contents of SQL](#course_contents)
   - [Introduction & Pre-Requisites](#rpe_requisites)
-  
 - [Basic SQL](#basic)
   - [SQL Commands](#commands)
 
@@ -2399,11 +2398,26 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 
 # Basic SQL<a name="basic"></a> 
 
-
-<br/> <br/><br/>
-
 ## SQL Commands<a name="commands"></a> 
+DDL commands
 
+- CREATE, ALTER, DROP, TRUNCATE
+
+DML commands
+
+- INSERT, UPDATE, DELETE, MERGE
+
+TCL commands
+
+- COMMIT, ROLLBACK and SAVEPOINT
+
+DCL commands
+
+- GRANT and REVOKE
+
+DQL commands
+
+- SELECT statement
 
 <br/> <br/><br/>
 <br/> <br/>
