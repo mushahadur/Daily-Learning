@@ -67,6 +67,10 @@
   
 - [Course Contents of SQL](#course_contents)
   - [Introduction & Pre-Requisites](#rpe_requisites)
+  
+- [Basic SQL](#basic)
+  - [SQL Commands](#commands)
+
 
 
 - [Mini Project](#project)
@@ -2380,7 +2384,6 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 # Course Contents of SQL<a name="course_contents"></a> 
 
  <br/>
-<br/> <br/><br/>
 
 ## Introduction & Pre-Requisites<a name="rpe_requisites"></a>
 
@@ -2393,6 +2396,15 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 - Installing a database and tools required to get started
 
 <br/> <br/><br/>
+
+# Basic SQL<a name="basic"></a> 
+
+
+<br/> <br/><br/>
+
+## SQL Commands<a name="commands"></a> 
+
+
 <br/> <br/><br/>
 <br/> <br/>
 
