@@ -67,9 +67,9 @@
   
 - [Course Contents of SQL](#course_contents)
   - [Introduction & Pre-Requisites](#rpe_requisites)
-- [Basic SQL](#basic)
-  - [SQL Commands](#commands)
-    - [Data Types](#data_types)
+  - [Basic SQL](#basic)
+    - [SQL Commands](#commands)
+        - [Data Types](#data_types)
 
 
 
@@ -2400,25 +2400,25 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 # Basic SQL<a name="basic"></a> 
 
 ## SQL Commands<a name="commands"></a> 
-DDL commands
+- DDL commands
 
-- CREATE, ALTER, DROP, TRUNCATE
+  - CREATE, ALTER, DROP, TRUNCATE
 
-DML commands
+- DML commands
 
-- INSERT, UPDATE, DELETE, MERGE
+  - INSERT, UPDATE, DELETE, MERGE
 
-TCL commands
+- TCL commands
 
-- COMMIT, ROLLBACK and SAVEPOINT
+  - COMMIT, ROLLBACK and SAVEPOINT
 
-DCL commands
+- DCL commands
 
-- GRANT and REVOKE
+  - GRANT and REVOKE
 
-DQL commands
+- DQL commands
 
-- SELECT statement
+ - SELECT statement
 
 ## Data Types<a name="data_types"></a> 
 - String data type like VARCHAR, TEXT etc
