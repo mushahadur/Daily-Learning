@@ -69,6 +69,7 @@
   - [Introduction & Pre-Requisites](#rpe_requisites)
 - [Basic SQL](#basic)
   - [SQL Commands](#commands)
+    - [Data Types](#data_types)
 
 
 
@@ -2418,6 +2419,19 @@ DCL commands
 DQL commands
 
 - SELECT statement
+
+## Data Types<a name="data_types"></a> 
+- String data type like VARCHAR, TEXT etc
+
+- Integer data type like INT, NUMBER etc.
+
+- DATE
+
+- FLOAT / DECIMAL
+
+- BOOLEAN
+
+- IDENTITY column (Auto Increment column)
 
 <br/> <br/><br/>
 <br/> <br/>
