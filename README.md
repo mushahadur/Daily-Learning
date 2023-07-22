@@ -70,6 +70,14 @@
   - [Basic SQL](#basic)
     - [SQL Commands](#commands)
         - [Data Types](#data_types)
+        - [Constraints](#constraints)
+        - [Normalization in SQL](#normalization_sql)
+        - [Operator](#operator)
+        - [CASE statement](#case_statement)
+        - [Important SQL clause](#important_sql_clause)
+        - [INNER join](#inner_join)
+        
+        
 
 
 
@@ -2432,6 +2440,40 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 - BOOLEAN
 
 - IDENTITY column (Auto Increment column)
+
+## Constraints<a name="constraints"></a> 
+- PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, NOT NULL and DEFAULT constraints
+
+- Understanding how foreign key and primary is used to build relationship between tables.
+
+
+## Normalization in SQL<a name="normalization_sql"></a> 
+- Different normal forms like 1NF, 2NF, 3NF, BCNF
+
+- Understand ER (Entity Relationship) diagram
+
+## Operator<a name="operator"></a> 
+- Arithmetic operator
+
+- Logical operator
+
+- Comparison operator
+
+- UNION, UNION ALL operator
+
+## CASE statement<a name="case_statement"></a> 
+- Simple case statement as well nested case statement.
+
+## Important SQL clause<a name="important_sql_clause"></a> 
+- DISTINCT clause
+
+- Order by clause
+
+- Limit / Top clause
+
+
+## INNER join<a name="inner_join"></a> 
+- How to fetch data from multiple tables.
 
 <br/> <br/><br/>
 <br/> <br/>
