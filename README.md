@@ -65,6 +65,9 @@
   - [Index structure](#index_structure)
   - [Indexing Methods](#index_methods)
   
+- [Course Contents of SQL](#course_contents)
+  - [Introduction & Pre-Requisites](#rpe_requisites)
+
 
 - [Mini Project](#project)
 
@@ -2372,7 +2375,23 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 
 
 <br/> <br/><br/>
+<br/>
+
+# Course Contents of SQL<a name="course_contents"></a> 
+
+ <br/>
 <br/> <br/><br/>
+
+## Introduction & Pre-Requisites<a name="rpe_requisites"></a>
+
+- Introduction to data, database, schema and SQL.
+
+- Understand why do we use SQL and how data is stored in database
+
+- How to choose a database and IDE
+
+- Installing a database and tools required to get started
+
 <br/> <br/><br/>
 <br/> <br/><br/>
 <br/> <br/>
@@ -2380,7 +2399,9 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 
 
 <br/>
+
 # Mini-CRM <a name="project"></a> 
+
  <br/>
 <br/>
 <br/>
