@@ -2479,7 +2479,7 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 <br/> <br/><br/>
 <br/> <br/>
 
-# Role-Permission Work Flow<a name="role_permission">[](https://www.youtube.com/watch?v=optbirFKTw8&list=PL_ftyCsXJUO4aDoMz7P8xnMf6xsUWN57x&index=1&ab_channel=Maniruzzaman-Akash "Role-Permission Work Flow")</a>  
+# Role-Permission Work Flow<a name="role_permission"></a> [link](https://www.youtube.com/watch?v=optbirFKTw8&list=PL_ftyCsXJUO4aDoMz7P8xnMf6xsUWN57x&index=1&ab_channel=Maniruzzaman-Akash "Role-Permission Work Flow")
 ### Day One
 - Laravel Project Setup
 - Database Setup
