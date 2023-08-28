@@ -2481,14 +2481,98 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 
 # Role-Permission Work Flow<a name="role_permission"></a>  
 
-## Day One
-- DDL commands
+### Day One
+- Laravel Project Setup
+- Database Setup
+- Install Frontend Scaffolding Usng Laravel UI
+- Basic User Authentication in Laravel
 
-  - CREATE, ALTER, DROP, TRUNCATE
+### Day TWo
+- Laravel Permission Package Insatllation
+  - spatie.be/laravel-permission
 
-- DML commands
+- Roles Seeder Create
+  - Multiple Role Create - Super-Admin, Admin, Editor, User
 
-  - INSERT, UPDATE, DELETE, MERGE
+- Permission Seeder Create
+  - All Permissions of Sites would be seeded first
+
+### Day Three
+- Admin Dashboard Setup
+  - https://github.com/puikinsh/srtdash-admin-dashboard
+
+- Create Role in Laravel
+  - https://docs.spatie.be/laravel-permis
+
+
+### Day Four
+- Role Create in Laravel 7.x
+  - All Permissions
+  - Multiple Check Box Selected
+  - Use jQuery
+
+- Role Grouping And jQuery Check
+
+
+### Day Five
+- Role Check-box All Selected
+- Role Grouping
+- Group Wish Check-box
+- Role Edid in Laravel 
+  - Multiple Check Box Selected
+  - Use jQuery
+
+
+### Day Six
+- Role Edit in Laravel 7.x
+  - Edit Data and Check box selected based on permission
+  - Check group item and deselect group base on condition
+  - Check / Uncheck any and update to all checkbox field
+  - Update Edit Data
+
+
+
+### Day Seven
+- User List
+- Create User
+  - sCreate a Basic User
+  - Add Validation Roles
+
+- Assign Role When Creating a User
+- Edit User with Selected Role
+  - Selected the user data
+  - Add validation Roles
+  - Update Roles on User	
+
+
+
+### Day Eight
+- Multi Guard Authentication System Setup
+  - Admin Guard Setup
+
+- Login
+  - Login Page Setup (View)
+  - Login Functionality Overrides For Admin Guard
+
+
+
+### Day_Nine 
+ - Change User Model to Admin Model
+ - Create Tow pages like
+    - Role Management
+    - User Management
+    - Blog Management 
+ - Permission Wise page View in Laravel 7.x in Controller
+ - Permission Manage in Sidebar or inside Page
+
+
+### Day Ten
+- Authenticated Error Page Handling
+    - 403 Error page Design and Integrate
+    - 500 Error Page
+- Finishign Up
+- Home Page Redirection
+- Clean Up Dahboard Page
 
 <br/>
 
