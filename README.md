@@ -2490,17 +2490,14 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 ### Day TWo
 - Laravel Permission Package Insatllation
   - spatie.be/laravel-permission
-
 - Roles Seeder Create
   - Multiple Role Create - Super-Admin, Admin, Editor, User
-
 - Permission Seeder Create
   - All Permissions of Sites would be seeded first
 
 ### Day Three
 - Admin Dashboard Setup
   - https://github.com/puikinsh/srtdash-admin-dashboard
-
 - Create Role in Laravel
   - https://docs.spatie.be/laravel-permis
 
@@ -2510,7 +2507,6 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
   - All Permissions
   - Multiple Check Box Selected
   - Use jQuery
-
 - Role Grouping And jQuery Check
 
 
@@ -2537,7 +2533,6 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 - Create User
   - sCreate a Basic User
   - Add Validation Roles
-
 - Assign Role When Creating a User
 - Edit User with Selected Role
   - Selected the user data
@@ -2549,7 +2544,6 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 ### Day Eight
 - Multi Guard Authentication System Setup
   - Admin Guard Setup
-
 - Login
   - Login Page Setup (View)
   - Login Functionality Overrides For Admin Guard
