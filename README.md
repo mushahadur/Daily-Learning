@@ -78,7 +78,8 @@
         - [INNER join](#inner_join)
         
         
-
+  
+- [Role-Permission Work Flow](#role_permission)
 
 
 - [Mini Project](#project)
@@ -2472,13 +2473,22 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 - Limit / Top clause
 
 
-## INNER join<a name="inner_join"></a> 
+## INNER join<a name="inner_join"></a>  
 - How to fetch data from multiple tables.
 
 <br/> <br/><br/>
 <br/> <br/>
 
+# Role-Permission Work Flow<a name="role_permission"></a>  
 
+## Day One
+- DDL commands
+
+  - CREATE, ALTER, DROP, TRUNCATE
+
+- DML commands
+
+  - INSERT, UPDATE, DELETE, MERGE
 
 <br/>
 
