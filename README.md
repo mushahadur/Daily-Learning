@@ -16,6 +16,7 @@
   - [Using the with() method](#with-method)
   - [Using the compact()](#compact)
   - [Fetch the data in the controller](#fetch-the-data)
+  - [Data pass to array function](#array_function)
 - [Abstraction Vs Interfaces](#abstraction-interfaces)
   - [What is the trait in PHP](#trait-in-php)
 - [Laravel Add a new column to existing table in a migration](#add-column)
@@ -202,14 +203,87 @@
 ```php
  public function index()
 {
-    return view('my-view')
-        ->with('title', 'Welcome to my website')
-        ->with('content', 'This is some content that will be displayed on the page');
+    $users      = User::get();
+    $products   = Product::get();
+    return view('my-view', compect('users', 'products'));
 }
 
 ```
 
 <br/>
+<br/>
+
+
+
+### 4. Data pass to array function: <a name="array_function"></a>  
+<p> When i have many value pass the blade file then we can use get_defined_vars() this function . 
+
+ For example:
+
+</p>
+
+<br/>
+
+```php
+ public function index()
+{
+    $users      = User::get();
+    $posts      = Post::get();
+    $products   = Product::get();
+    $orders   = Order::get();
+    $shops   = Shop::get();
+    $customers   = Customer::get();
+     return view('frontend.pages.home.index', get_defined_vars());
+}
+
+```
+
+<br/>
+<br/>
+
+#### View blade file by foreach loop:
+
+```php
+
+This is post
+    @foreach ($posts as $post)
+        <h2>{{ $post->title }}</h2>
+        <p>{{ $post->content }}</p>
+        <p>Author: {{ $post->user->name }}</p>
+    @endforeach
+
+This is customer
+    @foreach ($customers as $customer)
+        <h2>{{ $customer->title }}</h2>
+        <p>{{ $customer->content }}</p>
+        <p>Author: {{ $customer->user->name }}</p>
+    @endforeach
+
+    This is post
+    @foreach ($posts as $post)
+        <h2>{{ $post->title }}</h2>
+        <p>{{ $post->content }}</p>
+        <p>Author: {{ $post->user->name }}</p>
+    @endforeach
+
+    This is post
+    @foreach ($shops as $shop)
+        <h2>{{ $shop->title }}</h2>
+        <p>{{ $shop->content }}</p>
+        <p>Author: {{ $shop->user->name }}</p>
+    @endforeach
+
+    This is post
+    @foreach ($orders as $order)
+        <h2>{{ $order->title }}</h2>
+        <p>{{ $order->content }}</p>
+        <p>Author: {{ $order->user->name }}</p>
+    @endforeach
+```
+
+<br/>
+
+
 
 ### 4. Fetch the data in the controller : <a name="fetch-the-data"></a>
 <p> In your controller, you can fetch the data from the database using the model you just created.
