@@ -16,7 +16,7 @@
   - [Using the with() method](#with-method)
   - [Using the compact()](#compact)
   - [Data pass to array function](#array_function)
-- [Fetch the data in the controller](#fetch-the-data)
+  - [Fetch the data in the controller](#fetch-the-data)
 - [Abstraction Vs Interfaces](#abstraction-interfaces)
   - [What is the trait in PHP](#trait-in-php)
 - [Laravel Add a new column to existing table in a migration](#add-column)
@@ -285,7 +285,7 @@ This is customer
 
 
 
-### 4. Fetch the data in the controller : <a name="fetch-the-data"></a>
+### 5. Fetch the data in the controller : <a name="fetch-the-data"></a>
 <p> In your controller, you can fetch the data from the database using the model you just created.
 
  For example:
