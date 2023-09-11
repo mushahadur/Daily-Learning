@@ -63,7 +63,7 @@
     - [Second normal form (2NF) ](#2nf)
     - [Third normal form (3NF)](#3nf)
 - [Indexing in DBMS](#indexing)
-  - [Index structure](#index_structure)
+  - [Input/Output Cost in Indexing](#i_o_cost)
   - [Indexing Methods](#index_methods)
   
 - [Course Contents of SQL](#course_contents)
@@ -2526,20 +2526,26 @@ Indexed Search < Linear Search = 17 < 100000.
 
 
 
-## Index Structure  <a name="index_structure"></a>
+## Input/Output Cost in Indexing  <a name="i_o_cost"></a>
 
-<p>Indexes can be created using some database columns.</p>
+<p>How way calculate Cost of Input Output ? So, Two Questions Solve under the bellow..</p>
 
-<img src="./images/indexing-in-dbms.png"  title="index image"/>
-
-- The first column of the database is the search key that contains a copy of the primary key or candidate key of the table. The values of the primary key are stored in sorted order so that the corresponding data can be accessed easily.
-- The second column of the database is the data reference. It contains a set of pointers holding the address of the disk block where the value of the particular key can be found.
+<img src="./images/indexing_Q_1.png"  title="index image"/>
+<hr>
+<img src="./images/indexing_Q_2.png"  title="index image"/>
+<hr>
+<img src="./images/indexing_Q_3.png"  title="index image"/>
+<hr>
+<img src="./images/indexing_Q_4.png"  title="index image"/>
+<hr>
+<img src="./images/indexing_Q_5.png"  title="index image"/>
+<hr>
+<img src="./images/indexing_Q_6.png"  title="index image"/>
+<hr>
+<img src="./images/indexing_Q_7.png"  title="index image"/>
+<hr>
 
 <br/> <br/><br/>
-<br/> <br/><br/>
-<br/> <br/><br/>
-<br/> <br/><br/>
-
 
 ## Indexing Methods <a name="index_methods"></a>
 
