@@ -63,9 +63,7 @@
     - [Second normal form (2NF) ](#2nf)
     - [Third normal form (3NF)](#3nf)
 - [Indexing in DBMS](#indexing)
-  - [Input/Output Cost in Indexing](#i_o_cost)
-  - [Indexing Methods](#index_methods)
-  
+  - [Input/Output Cost in Indexing](#i_o_cost)  
 - [Course Contents of SQL](#course_contents)
   - [Introduction & Pre-Requisites](#rpe_requisites)
   - [Basic SQL](#basic)
@@ -2540,23 +2538,12 @@ Indexed Search < Linear Search = 17 < 100000.
 <hr>
 <img src="./images/indexing_Q_5.png"  title="index image"/>
 <hr>
+<img src="./images/dbms_types.png"  title="index image"/>
 <img src="./images/indexing_Q_6.png"  title="index image"/>
 <hr>
 <img src="./images/indexing_Q_7.png"  title="index image"/>
 <hr>
 
-<br/> <br/><br/>
-
-## Indexing Methods <a name="index_methods"></a>
-
-<p>Indexes can be created using some database columns.</p>
-
-<img src="./images/dbms_types.png"  title="index image"/>
-
-
-
-
-<br/> <br/><br/>
 <br/>
 
 # Course Contents of SQL<a name="course_contents"></a> 
