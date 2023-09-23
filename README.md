@@ -2360,11 +2360,11 @@ Views in SQL are kind of virtual tables. A view also has rows and columns as the
 - A view can either have specific rows based on certain condition or all the rows of a table.
 
 ## Types of View <a name="types_of_view"></a> 
-    - - Simple View
-    - - Complex View
-    - - Force View
-    - - Read Only View
-    - - With Check Option View
+    -- Simple View
+    -- Complex View
+    -- Force View
+    -- Read Only View
+    -- With Check Option View
 
 ## Advantages of View <a name="advantages_of_view"></a> 
 
