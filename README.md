@@ -2451,7 +2451,10 @@ Third normal form (3NF) এ নেওয়ার জন্য আমদের �
 
  <img src="./images/normalizetion_6.png" title="image"/>
 
-
+<br>
+<hr>
+<br>
+<br>
 
 # Indexing in DBMS<a name="indexing"></a> 
 
