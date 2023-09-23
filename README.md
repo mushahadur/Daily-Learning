@@ -56,6 +56,10 @@
     - [Mutator](#mutator)
 - [Search and Build a filter (Popup)](#filtering)
 - [CSRF](#csrf)
+- [View Table](#about_view)
+    - [Views in SQL](#view_in_sql)
+    - [Types of View](#types_of_view)
+    - [Advantages of View](#advantages_of_view)
 - [Nomalizeton](#normalizetion)
     - [Data Redundancy](#data_redundancy)
     - [Data Redundancy](#data_integrity)
@@ -2343,11 +2347,34 @@ $.ajaxSetup({
 
 
 
+# About View Table <a name="about_view"></a> [View](# "Resources Link") 
+
+Views in SQL are kind of virtual tables. A view also has rows and columns as they are in a real table in the database. We can create a view by selecting fields from one or more tables present in the database. A View can either have all the rows of a table or specific rows based on certain condition. In this article we will learn about creating , deleting and updating Views.
 
 
 
+## Views in SQL <a name="view_in_sql"></a> 
 
+- Views in SQL are considered as a virtual table. A view also contains rows and columns.
+- To create the view, we can select the fields from one or more tables present in the database.
+- A view can either have specific rows based on certain condition or all the rows of a table.
 
+## Types of View <a name="types_of_view"></a> 
+    - - Simple View
+    - - Complex View
+    - - Force View
+    - - Read Only View
+    - - With Check Option View
+
+## Advantages of View <a name="advantages_of_view"></a> 
+
+1. Complexity: Views help to reduce the complexity. Different views can be created on the same base table for different users.
+2. Security: It increases the security by excluding the sensitive information from the view.
+3. Query Simplicity: It helps to simplify commands from the user. A view can draw data from several different tables and present it as a single table.
+4. Consistency: A view can present a consistent, unchanged image of the structure of the database. Views can be used to rename the columns without affecting the base table.
+5. Data Integrity: If data is accessed and entered through a view, the DBMS can automatically check the data to ensure that it meets the specified integrity constraints.
+6. Storage Capacity: Views take very little space to store the data.
+7. Logical Data Independence: View can make the application and database tables to a certain extent independent.
 
 
 
