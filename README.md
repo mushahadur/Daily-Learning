@@ -51,6 +51,7 @@
 - [Use Request Class](#request_class)
 - [Redirect to login from register](#redirect_to_login)
 - [Create & Update Form need to refactor(DRY)](#refactor)
+- [Route Model Binding](#route_modelinding)
 - [Accessor & Mutator](#acc_mut)
     - [Accessor](#accessor)
     - [Mutator](#mutator)
@@ -1965,9 +1966,71 @@ Route::middleware('guest')->group(function () {
 </form>
 
 ```
+<br/>
+<br/> <br/>
+
+# Route Model Binding <a name="route_model_binding"></a>
+Route model binding in Laravel provides a mechanism to inject a model instance into your routes. Still not clear on the meaning.
+
+### First Step: 
+Company.blade.php -file
+
+```
+    @foreach($companies as $company)
+        <tr>
+            <td>{{$loop->iteration}}</td>
+            <td>{{$company->name}}</td>
+            <td>{{$company->email}}</td>
+            <td class="d-flex justify-content-start">
+                <a href="{{ route('companies.show', $company->id) }}" class="btn btn-outline-info mx-1" >
+                    <i class="fa fa-eye"></i>
+                </a>
+                <a href="{{ route('companies.edit', $company) }}" class="btn btn-outline-success mx-1" >
+                    @method('PUT')
+                    <i class="fa fa-edit"></i>
+                </a>
+                    <form id="delete-form" action="{{ route('companies.destroy', $company) }}" method="POST" >
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-outline-danger mx-1" type="submit" ><i class="fa fa-trash"></i></button>
+                    </form>
+            </td>
+        </tr>
+    @endforeach
+```
+
+### Secoun Step: 
+web.php -file
+
+```
+    // For Company Resource controller
+    Route::resource('companies', CompanyController::class);
+```
+
+### Third Step: 
+CompanyController.php -file
+
+```
+    public function show(Company $company)
+    {
+        return view('admin.company.detail')->with('company', $company);
+    }
+
+    public function edit(Company $company)
+    {
+        return view('admin.company.edit')->with('company', $company);
+    }
+
+    public function destroy(Company $company)
+    { 
+        $company->delete();
+        return redirect(route('companies.index'));
+    }
+```
 
 <br/>
 <br/> <br/>
+<hr>
 
 # Accessor & Mutator <a name="acc_mut"></a>
 
