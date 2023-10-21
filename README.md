@@ -51,7 +51,7 @@
 - [Use Request Class](#request_class)
 - [Redirect to login from register](#redirect_to_login)
 - [Create & Update Form need to refactor(DRY)](#refactor)
-- [Route Model Binding](#route_modelinding)
+- [Route Model Binding](#route_model_binding)
 - [Accessor & Mutator](#acc_mut)
     - [Accessor](#accessor)
     - [Mutator](#mutator)
