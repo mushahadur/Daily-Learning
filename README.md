@@ -1974,8 +1974,7 @@ Route model binding in Laravel provides a mechanism to inject a model instance i
 
 ### First Step: 
 Company.blade.php -file
-
-```
+```php
     @foreach($companies as $company)
         <tr>
             <td>{{$loop->iteration}}</td>
@@ -2002,7 +2001,7 @@ Company.blade.php -file
 ### Secoun Step: 
 web.php -file
 
-```
+```php
     // For Company Resource controller
     Route::resource('companies', CompanyController::class);
 ```
@@ -2010,7 +2009,7 @@ web.php -file
 ### Third Step: 
 CompanyController.php -file
 
-```
+```php
     public function show(Company $company)
     {
         return view('admin.company.detail')->with('company', $company);
